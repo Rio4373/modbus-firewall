@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY plc-sim/requirements.txt /app/plc-sim/requirements.txt
+RUN pip install --no-cache-dir -r /app/plc-sim/requirements.txt
+
+COPY plc-sim /app/plc-sim
+
+ENTRYPOINT ["python", "/app/plc-sim/server.py"]
+CMD ["--config", "/app/plc-sim/config.json"]

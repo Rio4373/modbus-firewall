@@ -1,0 +1,52 @@
+services:
+  plc-sim:
+    build:
+      context: .
+      dockerfile: deployments/docker-compose/Dockerfile.plc-sim
+    container_name: modbus-plc-sim
+    restart: unless-stopped
+    volumes:
+      - ./plc-sim/config.json:/app/plc-sim/config.json:ro
+    networks:
+      modbus-net:
+        ipv4_address: 10.10.0.3
+
+  firewall:
+    build:
+      context: .
+      dockerfile: deployments/docker-compose/Dockerfile.firewall
+    container_name: modbus-firewall
+    restart: unless-stopped
+    depends_on:
+      - plc-sim
+    volumes:
+      - ./configs:/app/configs
+      - ./data:/app/data
+      - ./reports:/app/reports
+    ports:
+      - "1502:1502"
+    command: ["run", "--config", "./configs/config.yaml", "--policy", "./configs/policy.yaml", "--reload-interval", "1s"]
+    networks:
+      modbus-net:
+        ipv4_address: 10.10.0.4
+
+  arm-sim:
+    build:
+      context: .
+      dockerfile: deployments/docker-compose/Dockerfile.arm-sim
+    container_name: modbus-arm-sim
+    depends_on:
+      - firewall
+    volumes:
+      - ./reports:/app/reports
+    command: ["sh", "-c", "tail -f /dev/null"]
+    networks:
+      modbus-net:
+        ipv4_address: 10.10.0.2
+
+networks:
+  modbus-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.0.0/24

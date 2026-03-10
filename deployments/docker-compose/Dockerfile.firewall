@@ -1,0 +1,17 @@
+FROM golang:1.24 AS build
+
+WORKDIR /src
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /out/firewall ./cmd/firewall
+
+FROM gcr.io/distroless/static-debian12
+
+WORKDIR /app
+COPY --from=build /out/firewall /usr/local/bin/firewall
+
+ENTRYPOINT ["/usr/local/bin/firewall"]
+CMD ["run", "--config", "./configs/config.yaml", "--policy", "./configs/policy.yaml", "--reload-interval", "1s"]

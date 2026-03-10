@@ -1,0 +1,8 @@
+/bin/
+/data/
+/reports/
+/configs/policy.candidate.yaml
+/configs/policy.generated.yaml
+*.log
+.DS_Store
+.venv/

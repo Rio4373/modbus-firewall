@@ -1,0 +1,12 @@
+.git
+.gitignore
+bin
+data
+deployments/docker-compose/README.md
+reports
+.vscode
+.idea
+.DS_Store
+*.log
+*.db
+.venv

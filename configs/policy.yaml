@@ -1,0 +1,18 @@
+version: 1
+default_action: deny
+
+rules:
+  - id: allow-arm-read-holding
+    action: allow
+    source_ips:
+      - "10.10.0.2"
+    destination_ips:
+      - "10.10.0.3"
+    unit_ids:
+      - 1
+    function_codes:
+      - 3
+      - 4
+    address_ranges:
+      - start: 0
+        end: 200

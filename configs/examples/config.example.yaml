@@ -1,0 +1,17 @@
+mode: observe
+
+server:
+  listen_addr: "0.0.0.0:1502"
+
+proxy:
+  upstream_addr: "plc-sim:502"
+  dial_timeout: "3s"
+  read_timeout: "5s"
+  write_timeout: "5s"
+
+logging:
+  level: "info"
+  format: "text"
+
+storage:
+  events_path: "./data/events.db"

@@ -1,0 +1,36 @@
+version: 1
+default_action: deny
+
+rules:
+  - id: allow-arm-read
+    action: allow
+    source_ips:
+      - "10.10.0.2"
+    destination_ips:
+      - "10.10.0.3"
+    unit_ids:
+      - 1
+    function_codes:
+      - 1
+      - 2
+      - 3
+      - 4
+    address_ranges:
+      - start: 0
+        end: 200
+  - id: allow-arm-write-limited
+    action: allow
+    source_ips:
+      - "10.10.0.2"
+    destination_ips:
+      - "10.10.0.3"
+    unit_ids:
+      - 1
+    function_codes:
+      - 5
+      - 6
+      - 15
+      - 16
+    address_ranges:
+      - start: 10
+        end: 20
