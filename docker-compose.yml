@@ -44,6 +44,24 @@ services:
       modbus-net:
         ipv4_address: 10.10.0.2
 
+  operational-tests:
+    profiles:
+      - testing
+    build:
+      context: .
+      dockerfile: deployments/docker-compose/Dockerfile.operational-tests
+    container_name: modbus-operational-tests
+    volumes:
+      - ./artifacts:/workspace/artifacts
+    environment:
+      BENCHMARK_REQUESTS: "${BENCHMARK_REQUESTS:-500000}"
+      LATENCY_REQUESTS: "${LATENCY_REQUESTS:-3000}"
+      STABILITY_SECONDS: "${STABILITY_SECONDS:-60}"
+    command: ["make", "test-load"]
+    networks:
+      modbus-net:
+        ipv4_address: 10.10.0.5
+
 networks:
   modbus-net:
     driver: bridge

@@ -1,0 +1,22 @@
+ source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=4 start_address=0 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:02.519+04:00 level=WARN msg="запрос заблокирован: ошибка парсинга в enforce режиме" source_ip=127.0.0.1 destination_ip=127.0.0.1 error="quantity: должно быть > 0"
+time=2026-05-17T17:06:02.519+04:00 level=WARN msg="соединение завершено с ошибкой" error="enforce safe deny: не удалось распарсить запрос: quantity: должно быть > 0"
+time=2026-05-17T17:06:02.520+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=3 start_address=300 quantity=4 reason="policy decision deny"
+time=2026-05-17T17:06:02.520+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=6 start_address=60 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:02.521+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=4 start_address=0 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:02.521+04:00 level=WARN msg="запрос заблокирован: ошибка парсинга в enforce режиме" source_ip=127.0.0.1 destination_ip=127.0.0.1 error="quantity: должно быть > 0"
+time=2026-05-17T17:06:02.521+04:00 level=WARN msg="соединение завершено с ошибкой" error="enforce safe deny: не удалось распарсить запрос: quantity: должно быть > 0"
+time=2026-05-17T17:06:02.521+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=3 start_address=300 quantity=4 reason="policy decision deny"
+time=2026-05-17T17:06:02.522+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=6 start_address=60 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:02.522+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=4 start_address=0 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:02.522+04:00 level=WARN msg="запрос заблокирован: ошибка парсинга в enforce режиме" source_ip=127.0.0.1 destination_ip=127.0.0.1 error="quantity: должно быть > 0"
+time=2026-05-17T17:06:02.522+04:00 level=WARN msg="соединение завершено с ошибкой" error="enforce safe deny: не удалось распарсить запрос: quantity: должно быть > 0"
+time=2026-05-17T17:06:02.523+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=3 start_address=300 quantity=4 reason="policy decision deny"
+time=2026-05-17T17:06:02.523+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=6 start_address=60 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:02.523+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=4 start_address=0 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:02.524+04:00 level=WARN msg="запрос заблокирован: ошибка парсинга в enforce режиме" source_ip=127.0.0.1 destination_ip=127.0.0.1 error="quantity: должно быть > 0"
+time=2026-05-17T17:06:02.524+04:00 level=WARN msg="соединение завершено с ошибкой" error="enforce safe deny: не удалось распарсить запрос: quantity: должно быть > 0"
+time=2026-05-17T17:06:02.685+04:00 level=INFO msg="hot reload успешно применен" previous_mode=enforce new_mode=observe
+time=2026-05-17T17:06:03.686+04:00 level=INFO msg="hot reload успешно применен" previous_mode=observe new_mode=enforce
+time=2026-05-17T17:06:05.106+04:00 level=INFO msg="запрос заблокирован политикой" source_ip=127.0.0.1 destination_ip=127.0.0.1 unit_id=1 function_code=6 start_address=60 quantity=1 reason="policy decision deny"
+time=2026-05-17T17:06:05.185+04:00 level=INFO msg="hot reload успешно применен" previous_mode=enforce new_mode=enforce

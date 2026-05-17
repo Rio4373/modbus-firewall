@@ -1,0 +1,19 @@
+{
+  "name": "connection-loss-long-lived",
+  "requested": 1000,
+  "processed": 1000,
+  "allowed": 1000,
+  "blocked": 0,
+  "errors": 0,
+  "unexpected": 0,
+  "connection_drops": 0,
+  "avg_latency_ms": 0.421,
+  "median_latency_ms": 0.402,
+  "p95_latency_ms": 0.5,
+  "p99_latency_ms": 0.761,
+  "throughput_rps": 2345.89,
+  "duration_sec": 0.426,
+  "throughput_buckets": {
+    "0": 1000
+  }
+}

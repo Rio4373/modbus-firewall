@@ -6,7 +6,7 @@ POLICY ?= ./configs/policy.yaml
 CANDIDATE_POLICY ?= ./configs/policy.candidate.yaml
 BASELINE_POLICY ?= ./configs/policy.generated.yaml
 
-.PHONY: build test run-observe run-enforce validate-config generate-policy validate-policy reset-candidate apply-policy replay stand-up stand-down stand-logs stand-arm-normal stand-arm-repeated stand-arm-rare stand-arm-forbidden demo-prepare demo-observe demo-generate-policy demo-replay demo-enforce demo-hot-reload demo-all
+.PHONY: build test run-observe run-enforce validate-config generate-policy validate-policy reset-candidate apply-policy replay stand-up stand-down stand-logs stand-arm-normal stand-arm-repeated stand-arm-rare stand-arm-forbidden demo-prepare demo-observe demo-generate-policy demo-replay demo-enforce demo-hot-reload demo-all test-load benchmark test-reliability generate-report operational-smoke
 
 build:
 	$(GO) build -o $(BINARY) ./cmd/firewall
@@ -79,3 +79,18 @@ demo-hot-reload:
 
 demo-all:
 	./scripts/demo/run_all.sh
+
+test-load:
+	BENCHMARK_REQUESTS=$${BENCHMARK_REQUESTS:-500000} LATENCY_REQUESTS=$${LATENCY_REQUESTS:-3000} STABILITY_SECONDS=$${STABILITY_SECONDS:-60} ./scripts/testing/operational_benchmark.py
+
+benchmark:
+	BENCHMARK_REQUESTS=$${BENCHMARK_REQUESTS:-500000} LATENCY_REQUESTS=$${LATENCY_REQUESTS:-5000} STABILITY_SECONDS=$${STABILITY_SECONDS:-300} ./scripts/testing/operational_benchmark.py
+
+test-reliability:
+	BENCHMARK_REQUESTS=$${BENCHMARK_REQUESTS:-100000} LATENCY_REQUESTS=$${LATENCY_REQUESTS:-3000} STABILITY_SECONDS=$${STABILITY_SECONDS:-43200} ./scripts/testing/operational_benchmark.py
+
+generate-report:
+	./scripts/testing/operational_benchmark.py --skip-build --requests $${BENCHMARK_REQUESTS:-500000} --latency-requests $${LATENCY_REQUESTS:-3000} --stability-seconds $${STABILITY_SECONDS:-60}
+
+operational-smoke:
+	BENCHMARK_REQUESTS=200 LATENCY_REQUESTS=60 STABILITY_SECONDS=2 ./scripts/testing/operational_benchmark.py

@@ -1,0 +1,60 @@
+version: 1
+default_action: deny
+rules:
+  - id: allow-fc01-read-coils
+    action: allow
+    source_ips: ["127.0.0.1"]
+    destination_ips: ["127.0.0.1"]
+    unit_ids: [1]
+    function_codes: [1]
+    address_ranges:
+      - {start: 0, end: 31}
+  - id: allow-fc03-read-holding
+    action: allow
+    source_ips: ["127.0.0.1"]
+    destination_ips: ["127.0.0.1"]
+    unit_ids: [1]
+    function_codes: [3]
+    address_ranges:
+      - {start: 0, end: 63}
+  - id: allow-fc05-write-coil
+    action: allow
+    source_ips: ["127.0.0.1"]
+    destination_ips: ["127.0.0.1"]
+    unit_ids: [1]
+    function_codes: [5]
+    address_ranges:
+      - {start: 10, end: 10}
+  - id: allow-fc06-write-register
+    action: allow
+    source_ips: ["127.0.0.1"]
+    destination_ips: ["127.0.0.1"]
+    unit_ids: [1]
+    function_codes: [6]
+    address_ranges:
+      - {start: 12, end: 12}
+  - id: allow-fc15-write-coils
+    action: allow
+    source_ips: ["127.0.0.1"]
+    destination_ips: ["127.0.0.1"]
+    unit_ids: [1]
+    function_codes: [15]
+    address_ranges:
+      - {start: 20, end: 27}
+  - id: allow-fc16-write-registers
+    action: allow
+    source_ips: ["127.0.0.1"]
+    destination_ips: ["127.0.0.1"]
+    unit_ids: [1]
+    function_codes: [16]
+    address_ranges:
+      - {start: 30, end: 31}
+
+  - id: allow-hot-register-60
+    action: allow
+    source_ips: ["127.0.0.1"]
+    destination_ips: ["127.0.0.1"]
+    unit_ids: [1]
+    function_codes: [6]
+    address_ranges:
+      - {start: 60, end: 60}

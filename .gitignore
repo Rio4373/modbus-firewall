@@ -6,3 +6,5 @@
 *.log
 .DS_Store
 .venv/
+/artifacts/operational-tests/runtime/go-build-cache/
+/artifacts/operational-tests/runtime/pycache/

@@ -1,0 +1,150 @@
+{
+  "started_at": "2026-05-17T13:06:01.802+00:00",
+  "source_ip_probe": {
+    "enabled": false,
+    "note": "127.0.0.2 bind is unavailable on this host; Docker/Linux profile can run this probe"
+  },
+  "summary": {
+    "name": "load-500k-mixed",
+    "requested": 200,
+    "processed": 200,
+    "allowed": 120,
+    "blocked": 80,
+    "errors": 0,
+    "unexpected": 0,
+    "connection_drops": 0,
+    "avg_latency_ms": 0.583,
+    "median_latency_ms": 0.508,
+    "p95_latency_ms": 0.888,
+    "p99_latency_ms": 1.772,
+    "throughput_rps": 1687.2,
+    "duration_sec": 0.119,
+    "throughput_buckets": {
+      "0": 200
+    }
+  },
+  "false_positive": {
+    "total": 60,
+    "false_positive": 0,
+    "false_positive_percent": 0.0
+  },
+  "forbidden": {
+    "total": 200,
+    "blocked": 200,
+    "plc_delta": 0
+  },
+  "latency": {
+    "direct": {
+      "name": "latency-direct",
+      "requested": 60,
+      "processed": 60,
+      "allowed": 60,
+      "blocked": 0,
+      "errors": 0,
+      "unexpected": 0,
+      "connection_drops": 0,
+      "avg_latency_ms": 0.153,
+      "median_latency_ms": 0.153,
+      "p95_latency_ms": 0.18,
+      "p99_latency_ms": 0.185,
+      "throughput_rps": 6196.8,
+      "duration_sec": 0.01,
+      "throughput_buckets": {
+        "0": 60
+      }
+    },
+    "observe": {
+      "name": "latency-observe",
+      "requested": 60,
+      "processed": 60,
+      "allowed": 60,
+      "blocked": 0,
+      "errors": 0,
+      "unexpected": 0,
+      "connection_drops": 0,
+      "avg_latency_ms": 1.088,
+      "median_latency_ms": 0.918,
+      "p95_latency_ms": 3.079,
+      "p99_latency_ms": 3.703,
+      "throughput_rps": 898.95,
+      "duration_sec": 0.067,
+      "throughput_buckets": {
+        "0": 60
+      }
+    },
+    "enforce": {
+      "name": "latency-enforce",
+      "requested": 60,
+      "processed": 60,
+      "allowed": 60,
+      "blocked": 0,
+      "errors": 0,
+      "unexpected": 0,
+      "connection_drops": 0,
+      "avg_latency_ms": 1.13,
+      "median_latency_ms": 0.752,
+      "p95_latency_ms": 3.834,
+      "p99_latency_ms": 5.263,
+      "throughput_rps": 862.4,
+      "duration_sec": 0.07,
+      "throughput_buckets": {
+        "0": 60
+      }
+    }
+  },
+  "connection_loss": {
+    "name": "connection-loss-long-lived",
+    "requested": 1000,
+    "processed": 1000,
+    "allowed": 1000,
+    "blocked": 0,
+    "errors": 0,
+    "unexpected": 0,
+    "connection_drops": 0,
+    "avg_latency_ms": 0.421,
+    "median_latency_ms": 0.402,
+    "p95_latency_ms": 0.5,
+    "p99_latency_ms": 0.761,
+    "throughput_rps": 2345.89,
+    "duration_sec": 0.426,
+    "throughput_buckets": {
+      "0": 1000
+    }
+  },
+  "hot_reload": {
+    "pid_before": 24544,
+    "pid_after": 24544,
+    "restart_detected": false,
+    "before_outcome": "blocked",
+    "after_outcome": "allowed",
+    "reload_detected_sec": 1.209,
+    "same_connection_policy_applied": true
+  },
+  "recovery": {
+    "old_pid": 24544,
+    "new_pid": 24557,
+    "recovery_time_sec": 0.212,
+    "available_after_restart": true,
+    "config_preserved": true
+  },
+  "stability": {
+    "name": "stability",
+    "requested": 38,
+    "processed": 38,
+    "allowed": 38,
+    "blocked": 0,
+    "errors": 0,
+    "unexpected": 0,
+    "connection_drops": 0,
+    "avg_latency_ms": 3.044,
+    "median_latency_ms": 2.81,
+    "p95_latency_ms": 4.574,
+    "p99_latency_ms": 5.751,
+    "throughput_rps": 18.58,
+    "duration_sec": 2.046,
+    "throughput_buckets": {
+      "0": 19,
+      "1": 19
+    }
+  }
+}

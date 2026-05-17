@@ -1,0 +1,8 @@
+scenario,name,requested,processed,allowed,blocked,errors,unexpected,connection_drops,avg_latency_ms,median_latency_ms,p95_latency_ms,p99_latency_ms,throughput_rps,duration_sec
+load,load-500k-mixed,200,200,120,80,0,0,0,0.583,0.508,0.888,1.772,1687.2,0.119
+false_positive,false-positive-legitimate,60,60,60,0,0,0,0,0.552,0.548,0.626,0.647,1789.63,0.034
+latency_direct,latency-direct,60,60,60,0,0,0,0,0.153,0.153,0.18,0.185,6196.8,0.01
+latency_observe,latency-observe,60,60,60,0,0,0,0,1.088,0.918,3.079,3.703,898.95,0.067
+latency_enforce,latency-enforce,60,60,60,0,0,0,0,1.13,0.752,3.834,5.263,862.4,0.07
+connection_loss,connection-loss-long-lived,1000,1000,1000,0,0,0,0,0.421,0.402,0.5,0.761,2345.89,0.426
+stability,stability,38,38,38,0,0,0,0,3.044,2.81,4.574,5.751,18.58,2.046

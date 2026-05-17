@@ -1,0 +1,19 @@
+{
+  "name": "load-500k-mixed",
+  "requested": 200,
+  "processed": 200,
+  "allowed": 120,
+  "blocked": 80,
+  "errors": 0,
+  "unexpected": 0,
+  "connection_drops": 0,
+  "avg_latency_ms": 0.583,
+  "median_latency_ms": 0.508,
+  "p95_latency_ms": 0.888,
+  "p99_latency_ms": 1.772,
+  "throughput_rps": 1687.2,
+  "duration_sec": 0.119,
+  "throughput_buckets": {
+    "0": 200
+  }
+}

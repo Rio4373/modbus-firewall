@@ -1,0 +1,20 @@
+{
+  "name": "stability",
+  "requested": 38,
+  "processed": 38,
+  "allowed": 38,
+  "blocked": 0,
+  "errors": 0,
+  "unexpected": 0,
+  "connection_drops": 0,
+  "avg_latency_ms": 3.044,
+  "median_latency_ms": 2.81,
+  "p95_latency_ms": 4.574,
+  "p99_latency_ms": 5.751,
+  "throughput_rps": 18.58,
+  "duration_sec": 2.046,
+  "throughput_buckets": {
+    "0": 19,
+    "1": 19
+  }
+}
