@@ -1,9 +1,9 @@
-# Modbus TCP Firewall (MVP)
+# Modbus TCP Firewall 
 
 ## Назначение проекта
-`modbus-firewall` — application-layer TCP proxy firewall для Modbus TCP.
+`modbus-firewall` — TCP proxy фаервол для Modbus TCP.
 
-Цель MVP:
+Цель:
 - прозрачно проксировать запросы ARM-клиента к PLC;
 - в режиме `observe` собирать события в SQLite;
 - генерировать политику на основе исторических событий;
