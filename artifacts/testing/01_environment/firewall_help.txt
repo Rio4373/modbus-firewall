@@ -1,0 +1,9 @@
+Использование:
+  firewall run --config ./configs/config.yaml [--mode observe|enforce] [--policy ./configs/policy.yaml] [--reload-interval 1s]
+  firewall validate-config --config ./configs/config.yaml [--mode observe|enforce]
+  firewall generate-policy --config ./configs/config.yaml [--output ./configs/policy.candidate.yaml] [--baseline-output ./configs/policy.generated.yaml] [--write-threshold 2]
+  firewall validate-policy --policy ./configs/policy.candidate.yaml
+  firewall reset-candidate --baseline ./configs/policy.generated.yaml --candidate ./configs/policy.candidate.yaml
+  firewall apply-policy --candidate ./configs/policy.candidate.yaml --active ./configs/policy.yaml
+  firewall replay --config ./configs/config.yaml [--policy ./configs/policy.yaml] [--events-db ./data/events.db] [--output ./reports/replay-report.json] [--timeout 30s]
+  firewall help

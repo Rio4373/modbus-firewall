@@ -1,0 +1,5 @@
+Поддерживаемые сценарии:
+- normal-read
+- repeated-write
+- rare-write
+- forbidden-write

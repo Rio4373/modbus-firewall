@@ -1,4 +1,4 @@
-time=2026-05-17T17:06:06.340+04:00 level=INFO msg="policy загружена для enforce режима" path=/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/operational-tests/runtime/policy.yaml rules=7
-time=2026-05-17T17:06:06.342+04:00 level=INFO msg="proxy запущен" mode=enforce listen_addr=127.0.0.1:16503 upstream_addr=127.0.0.1:16502 dial_timeout=3s read_timeout=5s write_timeout=5s
-time=2026-05-17T17:06:06.342+04:00 level=INFO msg="hot reload включен" config_path=/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/operational-tests/runtime/config.yaml policy_path=/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/operational-tests/runtime/policy.yaml interval=500ms
-time=2026-05-17T17:06:08.686+04:00 level=INFO msg="proxy остановлен" reason="context canceled"
+time=2026-05-18T16:52:06.522+04:00 level=INFO msg="policy загружена для enforce режима" path=/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/operational-tests/runtime/policy.yaml rules=7
+time=2026-05-18T16:52:06.525+04:00 level=INFO msg="proxy запущен" mode=enforce listen_addr=127.0.0.1:16503 upstream_addr=127.0.0.1:16502 dial_timeout=3s read_timeout=5s write_timeout=5s
+time=2026-05-18T16:52:06.525+04:00 level=INFO msg="hot reload включен" config_path=/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/operational-tests/runtime/config.yaml policy_path=/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/operational-tests/runtime/policy.yaml interval=500ms
+time=2026-05-18T16:52:11.958+04:00 level=INFO msg="proxy остановлен" reason="context canceled"

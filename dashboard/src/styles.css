@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #071019;
+  color: #e5edf5;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #071019;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+th {
+  background: #0a1420;
+  color: #b7c3d0;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+td,
+th {
+  border-bottom: 1px solid #1d2a3a;
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+td {
+  color: #d7e1eb;
+}
+
+.nav-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 10px 12px;
+  color: #c7d2df;
+}
+
+.nav-button:hover {
+  border-color: #263445;
+  background: #0d1722;
+}
+
+.nav-button-active {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  color: #f3f8fc;
+}
+
+.badge {
+  display: inline-flex;
+  min-width: 74px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.badge-success {
+  border-color: rgba(44, 195, 107, 0.5);
+  background: rgba(44, 195, 107, 0.12);
+  color: #7de5a5;
+}
+
+.badge-danger {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(239, 68, 68, 0.12);
+  color: #ff9a9a;
+}
+
+.badge-warning {
+  border-color: rgba(234, 179, 8, 0.5);
+  background: rgba(234, 179, 8, 0.12);
+  color: #f3d46b;
+}
+
+.badge-default {
+  border-color: #344458;
+  background: #111d2a;
+  color: #cbd6e2;
+}
+
+.code-block {
+  max-height: 560px;
+  overflow: auto;
+  white-space: pre;
+  border-radius: 6px;
+  border: 1px solid #263445;
+  background: #050b12;
+  padding: 14px;
+  color: #b9e6c8;
+  font-size: 12px;
+  line-height: 1.5;
+}

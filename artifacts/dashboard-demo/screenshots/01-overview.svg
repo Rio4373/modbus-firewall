@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#080d13"/>
+  <rect x="24" y="24" width="240" height="672" fill="#0b1118" stroke="#263443"/>
+  <text x="48" y="64" fill="#d9e2ec" font-family="Arial" font-size="22" font-weight="700">Modbus Firewall</text>
+  <text x="48" y="92" fill="#8796a8" font-family="Arial" font-size="13">Industrial monitoring console</text>
+  <text x="48" y="150" fill="#d9e2ec" font-family="Arial" font-size="16">Overview</text>
+  <text x="48" y="190" fill="#8796a8" font-family="Arial" font-size="16">Live Traffic</text>
+  <text x="48" y="230" fill="#8796a8" font-family="Arial" font-size="16">Security Policy</text>
+  <rect x="292" y="24" width="964" height="112" rx="8" fill="#101821" stroke="#263443"/>
+  <text x="322" y="72" fill="#f5f8fb" font-family="Arial" font-size="28" font-weight="700">Firewall Operational Dashboard</text>
+  <text x="322" y="104" fill="#8796a8" font-family="Arial" font-size="15">Live Modbus TCP analysis, filtering, policy reload and thesis demo metrics.</text>
+  <g font-family="Arial">
+    <rect x="292" y="160" width="180" height="94" rx="8" fill="#101821" stroke="#263443"/><text x="314" y="194" fill="#8796a8" font-size="14">Status</text><text x="314" y="232" fill="#2dd477" font-size="28" font-weight="700">ONLINE</text>
+    <rect x="488" y="160" width="180" height="94" rx="8" fill="#101821" stroke="#263443"/><text x="510" y="194" fill="#8796a8" font-size="14">Mode</text><text x="510" y="232" fill="#f5c84b" font-size="28" font-weight="700">ANALYZE</text>
+    <rect x="684" y="160" width="180" height="94" rx="8" fill="#101821" stroke="#263443"/><text x="706" y="194" fill="#8796a8" font-size="14">PID</text><text x="706" y="232" fill="#d9e2ec" font-size="28" font-weight="700">34628</text>
+    <rect x="880" y="160" width="180" height="94" rx="8" fill="#101821" stroke="#263443"/><text x="902" y="194" fill="#8796a8" font-size="14">Processed</text><text x="902" y="232" fill="#d9e2ec" font-size="28" font-weight="700">500000</text>
+    <rect x="1076" y="160" width="180" height="94" rx="8" fill="#101821" stroke="#263443"/><text x="1098" y="194" fill="#8796a8" font-size="14">Blocked</text><text x="1098" y="232" fill="#ff4f5e" font-size="28" font-weight="700">80000</text>
+  </g>
+  <rect x="292" y="282" width="964" height="390" rx="8" fill="#101821" stroke="#263443"/>
+  <text x="322" y="324" fill="#f5f8fb" font-family="Arial" font-size="22" font-weight="700">Operational Metrics</text>
+  <polyline points="330,610 460,560 590,580 720,460 850,500 980,390 1110,430 1210,320" fill="none" stroke="#48a1ff" stroke-width="4"/>
+  <polyline points="330,640 460,620 590,610 720,600 850,570 980,560 1110,520 1210,500" fill="none" stroke="#ff4f5e" stroke-width="4"/>
+</svg>

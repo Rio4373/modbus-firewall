@@ -93,18 +93,24 @@ func NewMatcher(policy Policy) (*Matcher, error) {
 
 // Evaluate применяет правила по порядку, либо возвращает default_action.
 func (m *Matcher) Evaluate(req MatchRequest) (Decision, error) {
+	decision, _, err := m.EvaluateDetailed(req)
+	return decision, err
+}
+
+// EvaluateDetailed возвращает решение и id совпавшего правила для allow/deny rule.
+func (m *Matcher) EvaluateDetailed(req MatchRequest) (Decision, string, error) {
 	sourceAddr, destinationAddr, err := parseAndValidateMatchRequest(req)
 	if err != nil {
-		return DecisionDeny, err
+		return DecisionDeny, "", err
 	}
 
 	for _, rule := range m.policy.Rules {
 		if ruleMatches(rule, req, sourceAddr, destinationAddr) {
-			return rule.Action, nil
+			return rule.Action, rule.ID, nil
 		}
 	}
 
-	return m.policy.DefaultAction, nil
+	return m.policy.DefaultAction, "", nil
 }
 
 // applyDefaults заполняет дефолтную версию и default_action.

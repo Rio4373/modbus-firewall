@@ -151,8 +151,8 @@ func TestBuildScenarioOperationsForbiddenWrite(t *testing.T) {
 	if parsed.FunctionCode != modbus.FunctionCodeWriteSingleRegister {
 		t.Fatalf("ожидали FC06, получили 0x%02X", uint8(parsed.FunctionCode))
 	}
-	if parsed.StartAddress != 1000 {
-		t.Fatalf("ожидали start=1000, получили %d", parsed.StartAddress)
+	if parsed.StartAddress != 50 {
+		t.Fatalf("ожидали start=50, получили %d", parsed.StartAddress)
 	}
 }
 

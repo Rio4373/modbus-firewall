@@ -49,6 +49,15 @@ type hotReloadConfig struct {
 	Interval   time.Duration
 }
 
+// dashboardConfig описывает опциональный HTTP API для демонстрационного dashboard.
+type dashboardConfig struct {
+	Enabled       bool
+	Addr          string
+	ConfigPath    string
+	PolicyPath    string
+	CandidatePath string
+}
+
 // fileSignature помогает недорого определять изменения файла по времени/размеру.
 type fileSignature struct {
 	ModTimeUnixNano int64
@@ -66,6 +75,12 @@ type Service struct {
 
 	runtime   atomic.Pointer[runtimeState]
 	hotReload hotReloadConfig
+	dashboard dashboardConfig
+	telemetry *Telemetry
+}
+
+type detailedPolicyEngine interface {
+	EvaluateDetailed(req policy.MatchRequest) (policy.Decision, string, error)
 }
 
 // New создает и инициализирует сервис прокси.
@@ -78,6 +93,7 @@ func New(cfg config.Config, logger *slog.Logger, policyEngine policy.Engine, eve
 		cfg:        cfg,
 		logger:     logger,
 		eventStore: eventStore,
+		telemetry:  NewTelemetry(),
 	}
 	service.runtime.Store(&runtimeState{
 		Mode:    cfg.Mode,
@@ -101,6 +117,22 @@ func WithHotReload(configPath string, policyPath string, interval time.Duration)
 			ConfigPath: configPath,
 			PolicyPath: policyPath,
 			Interval:   interval,
+		}
+	}
+}
+
+// WithDashboard включает демонстрационный REST/SSE API поверх текущего proxy.
+func WithDashboard(addr string, configPath string, policyPath string, candidatePath string) Option {
+	return func(s *Service) {
+		if addr == "" {
+			return
+		}
+		s.dashboard = dashboardConfig{
+			Enabled:       true,
+			Addr:          addr,
+			ConfigPath:    configPath,
+			PolicyPath:    policyPath,
+			CandidatePath: candidatePath,
 		}
 	}
 }
@@ -143,6 +175,10 @@ func (s *Service) Run(ctx context.Context) error {
 		go s.runHotReload(ctx)
 	}
 
+	if s.dashboard.Enabled {
+		go s.runDashboard(ctx)
+	}
+
 	var wg sync.WaitGroup
 	go func() {
 		<-ctx.Done()
@@ -177,6 +213,8 @@ func (s *Service) Run(ctx context.Context) error {
 // handleConnection проксирует один клиентский TCP поток в upstream PLC.
 func (s *Service) handleConnection(ctx context.Context, clientConn net.Conn, timeouts proxyTimeouts) error {
 	defer clientConn.Close()
+	s.telemetry.ConnectionOpened()
+	defer s.telemetry.ConnectionClosed()
 
 	dialer := &net.Dialer{Timeout: timeouts.Dial}
 	upstreamConn, err := dialer.DialContext(ctx, "tcp", s.cfg.Proxy.UpstreamAddr)
@@ -199,9 +237,11 @@ func (s *Service) handleConnection(ctx context.Context, clientConn net.Conn, tim
 		if err != nil {
 			return err
 		}
+		requestStarted := time.Now()
 
 		active := s.currentRuntimeState()
 		parsedRequest, parseErr := modbus.ParseRequest(requestADU)
+		matchedRuleID := ""
 		if parseErr != nil {
 			if active.Mode == config.ModeEnforce {
 				s.logger.Warn(
@@ -210,10 +250,29 @@ func (s *Service) handleConnection(ctx context.Context, clientConn net.Conn, tim
 					slog.String("destination_ip", upstreamIP),
 					slog.String("error", parseErr.Error()),
 				)
+				s.telemetry.RecordTraffic(TrafficEvent{
+					Timestamp:     time.Now(),
+					Mode:          string(active.Mode),
+					SourceIP:      clientIP,
+					DestinationIP: upstreamIP,
+					Result:        "BLOCK",
+					Reason:        parseErr.Error(),
+					Latency:       time.Since(requestStarted),
+				})
 				return fmt.Errorf("enforce safe deny: не удалось распарсить запрос: %w", parseErr)
 			}
 			s.logger.Warn("не удалось распарсить Modbus запрос", slog.String("error", parseErr.Error()))
 		} else {
+			s.logger.Debug(
+				"запрос принят",
+				slog.String("mode", string(active.Mode)),
+				slog.String("source_ip", clientIP),
+				slog.String("destination_ip", upstreamIP),
+				slog.Int("unit_id", int(parsedRequest.UnitID)),
+				slog.Int("function_code", int(parsedRequest.FunctionCode)),
+				slog.Int("start_address", int(parsedRequest.StartAddress)),
+				slog.Int("quantity", int(parsedRequest.Quantity)),
+			)
 			s.saveParsedEvent(ctx, parsedRequest, clientIP, upstreamIP)
 		}
 
@@ -222,7 +281,8 @@ func (s *Service) handleConnection(ctx context.Context, clientConn net.Conn, tim
 				return fmt.Errorf("enforce safe deny: невалидный Modbus запрос")
 			}
 
-			allowed, reason := s.isRequestAllowed(parsedRequest, clientIP, upstreamIP, active.Matcher)
+			allowed, reason, ruleID := s.isRequestAllowed(parsedRequest, clientIP, upstreamIP, active.Matcher)
+			matchedRuleID = ruleID
 			if !allowed {
 				s.logger.Info(
 					"запрос заблокирован политикой",
@@ -239,8 +299,43 @@ func (s *Service) handleConnection(ctx context.Context, clientConn net.Conn, tim
 				if err := writeAll(clientConn, exceptionResponse, timeouts.Write); err != nil {
 					return fmt.Errorf("не удалось отправить exception ответ клиенту: %w", err)
 				}
+				s.telemetry.RecordTraffic(TrafficEvent{
+					Timestamp:     time.Now(),
+					Mode:          string(active.Mode),
+					SourceIP:      clientIP,
+					DestinationIP: upstreamIP,
+					UnitID:        parsedRequest.UnitID,
+					FunctionCode:  uint8(parsedRequest.FunctionCode),
+					StartAddress:  parsedRequest.StartAddress,
+					Quantity:      parsedRequest.Quantity,
+					Result:        "BLOCK",
+					Reason:        reason,
+					Latency:       time.Since(requestStarted),
+					Meta:          map[string]string{"matched_rule_id": matchedRuleID},
+				})
 				continue
 			}
+
+			s.logger.Debug(
+				"запрос разрешен политикой",
+				slog.String("source_ip", clientIP),
+				slog.String("destination_ip", upstreamIP),
+				slog.Int("unit_id", int(parsedRequest.UnitID)),
+				slog.Int("function_code", int(parsedRequest.FunctionCode)),
+				slog.Int("start_address", int(parsedRequest.StartAddress)),
+				slog.Int("quantity", int(parsedRequest.Quantity)),
+				slog.String("matched_rule_id", matchedRuleID),
+			)
+		} else {
+			s.logger.Debug(
+				"observe: запрос пропущен",
+				slog.String("source_ip", clientIP),
+				slog.String("destination_ip", upstreamIP),
+				slog.Int("unit_id", int(parsedRequest.UnitID)),
+				slog.Int("function_code", int(parsedRequest.FunctionCode)),
+				slog.Int("start_address", int(parsedRequest.StartAddress)),
+				slog.Int("quantity", int(parsedRequest.Quantity)),
+			)
 		}
 
 		if err := writeAll(upstreamConn, requestADU, timeouts.Write); err != nil {
@@ -254,6 +349,21 @@ func (s *Service) handleConnection(ctx context.Context, clientConn net.Conn, tim
 
 		if err := writeAll(clientConn, responseADU, timeouts.Write); err != nil {
 			return fmt.Errorf("не удалось отправить ответ клиенту: %w", err)
+		}
+		if parseErr == nil {
+			s.telemetry.RecordTraffic(TrafficEvent{
+				Timestamp:     time.Now(),
+				Mode:          string(active.Mode),
+				SourceIP:      clientIP,
+				DestinationIP: upstreamIP,
+				UnitID:        parsedRequest.UnitID,
+				FunctionCode:  uint8(parsedRequest.FunctionCode),
+				StartAddress:  parsedRequest.StartAddress,
+				Quantity:      parsedRequest.Quantity,
+				Result:        "ALLOW",
+				Latency:       time.Since(requestStarted),
+				Meta:          map[string]string{"matched_rule_id": matchedRuleID},
+			})
 		}
 	}
 }
@@ -277,33 +387,60 @@ func (s *Service) saveParsedEvent(ctx context.Context, parsed modbus.ParsedReque
 	saveCtx, cancel := context.WithTimeout(ctx, eventSaveTimeout)
 	defer cancel()
 
-	if _, err := s.eventStore.SaveEvent(saveCtx, event); err != nil {
+	eventID, err := s.eventStore.SaveEvent(saveCtx, event)
+	if err != nil {
 		s.logger.Warn("не удалось сохранить событие в storage", slog.String("error", err.Error()))
+		return
 	}
+
+	s.logger.Debug(
+		"событие сохранено в storage",
+		slog.Int64("event_id", eventID),
+		slog.String("source_ip", sourceIP),
+		slog.String("destination_ip", destinationIP),
+		slog.Int("unit_id", int(parsed.UnitID)),
+		slog.Int("function_code", int(parsed.FunctionCode)),
+		slog.Int("start_address", int(parsed.StartAddress)),
+		slog.Int("quantity", int(parsed.Quantity)),
+	)
 }
 
 // isRequestAllowed проверяет запрос через matcher и формирует reason для логов.
-func (s *Service) isRequestAllowed(parsed modbus.ParsedRequest, sourceIP string, destinationIP string, matcher policy.Engine) (bool, string) {
+func (s *Service) isRequestAllowed(parsed modbus.ParsedRequest, sourceIP string, destinationIP string, matcher policy.Engine) (bool, string, string) {
 	if matcher == nil {
-		return false, "policy matcher не загружен (default deny)"
+		return false, "policy matcher не загружен (default deny)", ""
 	}
 
-	decision, err := matcher.Evaluate(policy.MatchRequest{
+	req := policy.MatchRequest{
 		SourceIP:      sourceIP,
 		DestinationIP: destinationIP,
 		UnitID:        parsed.UnitID,
 		FunctionCode:  uint8(parsed.FunctionCode),
 		StartAddress:  parsed.StartAddress,
 		Quantity:      parsed.Quantity,
-	})
-	if err != nil {
-		return false, fmt.Sprintf("ошибка matcher: %v", err)
-	}
-	if decision != policy.DecisionAllow {
-		return false, "policy decision deny"
 	}
 
-	return true, ""
+	if detailedMatcher, ok := matcher.(detailedPolicyEngine); ok {
+		decision, matchedRuleID, err := detailedMatcher.EvaluateDetailed(req)
+		if err != nil {
+			return false, fmt.Sprintf("ошибка matcher: %v", err), ""
+		}
+		if decision != policy.DecisionAllow {
+			return false, "policy decision deny", matchedRuleID
+		}
+
+		return true, "", matchedRuleID
+	}
+
+	decision, err := matcher.Evaluate(req)
+	if err != nil {
+		return false, fmt.Sprintf("ошибка matcher: %v", err), ""
+	}
+	if decision != policy.DecisionAllow {
+		return false, "policy decision deny", ""
+	}
+
+	return true, "", ""
 }
 
 // runHotReload периодически проверяет изменения файлов и атомарно подменяет runtimeState.
@@ -361,6 +498,10 @@ func (s *Service) runHotReload(ctx context.Context) {
 				slog.String("previous_mode", string(previous.Mode)),
 				slog.String("new_mode", string(next.Mode)),
 			)
+			s.telemetry.RecordSystemEvent("policy_reload", "hot reload успешно применен", "INFO", map[string]string{
+				"previous_mode": string(previous.Mode),
+				"new_mode":      string(next.Mode),
+			})
 		}
 	}
 }

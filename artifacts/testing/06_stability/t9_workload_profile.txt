@@ -1,0 +1,4 @@
+normal_read_requests=3
+repeated_write_requests=3000
+expected_total_requests=3003
+operation_mix=fc03_read_and_fc06_write_single_register

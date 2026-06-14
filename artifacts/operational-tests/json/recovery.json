@@ -1,7 +1,7 @@
 {
-  "old_pid": 24544,
-  "new_pid": 24557,
-  "recovery_time_sec": 0.212,
+  "old_pid": 59400,
+  "new_pid": 69130,
+  "recovery_time_sec": 0.217,
   "available_after_restart": true,
   "config_preserved": true
 }

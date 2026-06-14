@@ -1,0 +1,59 @@
+version: 1
+default_action: deny
+
+rules:
+  - id: allow-read-range
+    action: allow
+    source_ips:
+      - "127.0.0.1"
+    destination_ips:
+      - "127.0.0.1"
+    unit_ids:
+      - 1
+    function_codes:
+      - 3
+    address_ranges:
+      - start: 0
+        end: 21
+
+  - id: allow-write-register-12
+    action: allow
+    source_ips:
+      - "127.0.0.1"
+    destination_ips:
+      - "127.0.0.1"
+    unit_ids:
+      - 1
+    function_codes:
+      - 6
+    address_ranges:
+      - start: 12
+        end: 12
+
+  - id: allow-hot-reload-write
+    action: allow
+    source_ips:
+      - "127.0.0.1"
+    destination_ips:
+      - "127.0.0.1"
+    unit_ids:
+      - 1
+    function_codes:
+      - 6
+    address_ranges:
+      - start: 50
+        end: 50
+
+  - id: allow-rare-write-range
+    action: allow
+    source_ips:
+      - "127.0.0.1"
+    destination_ips:
+      - "127.0.0.1"
+    unit_ids:
+      - 1
+    function_codes:
+      - 16
+    address_ranges:
+      - start: 80
+        end: 81

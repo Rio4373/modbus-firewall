@@ -6,12 +6,11 @@ source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/common.sh"
 print_header "SCENARIO 04: ENFORCE"
 require_docker
 
-set_firewall_mode "enforce"
-
 compose exec -T firewall firewall apply-policy \
   --candidate ./configs/policy.candidate.yaml \
   --active ./configs/policy.yaml
 
+set_firewall_mode "enforce"
 sleep 2
 
 normal_output="$(run_arm_scenario_with_retry normal-read)"

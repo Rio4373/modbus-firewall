@@ -1,0 +1,8 @@
+go version go1.25.5 darwin/arm64
+Python 3.9.6
+GNU Make 3.81
+Docker version 28.1.1, build 4eba377
+Docker Compose version v2.35.1-desktop.1
+docker_daemon=available
+tcpdump version 4.99.1 -- Apple version 148
+Darwin MacBook-Pro-Marat.local 24.4.0 Darwin Kernel Version 24.4.0: Fri Apr 11 18:32:05 PDT 2025; root:xnu-11417.101.15~117/RELEASE_ARM64_T8132 arm64

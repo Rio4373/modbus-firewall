@@ -1,0 +1,6 @@
+function_code	start_address	quantity	operation_type	events_count
+3	0	2	read	1
+3	10	2	read	1
+3	20	2	read	1
+6	12	1	write	10
+16	80	2	write	1

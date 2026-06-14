@@ -1,0 +1,14 @@
+ M Makefile
+ M README.md
+ M docs/DEMO.md
+ M internal/armsim/scenario.go
+ M internal/armsim/scenario_test.go
+ M internal/policy/policy.go
+ M internal/policy/policy_test.go
+ M internal/proxy/service.go
+ M scripts/demo/02_generate_policy.sh
+ M scripts/demo/05_hot_reload.sh
+?? artifacts/
+?? scripts/demo/demo_showcase.sh
+?? scripts/demo/local_e2e.sh
+?? scripts/testing/

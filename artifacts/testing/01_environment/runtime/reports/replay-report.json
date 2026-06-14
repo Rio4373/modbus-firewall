@@ -1,0 +1,18 @@
+{
+  "total_events": 14,
+  "covered_events": 13,
+  "blocked_events": 1,
+  "uncovered_operations": [
+    {
+      "source_ip": "127.0.0.1",
+      "destination_ip": "127.0.0.1",
+      "unit_id": 1,
+      "function_code": 16,
+      "start_address": 80,
+      "end_address": 81,
+      "quantity": 2,
+      "operation_type": "write",
+      "count": 1
+    }
+  ]
+}

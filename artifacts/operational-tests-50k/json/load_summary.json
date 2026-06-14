@@ -1,0 +1,53 @@
+{
+  "name": "load-50k-long-lived-mixed",
+  "requested": 50000,
+  "processed": 50000,
+  "allowed": 33335,
+  "blocked": 16665,
+  "errors": 0,
+  "unexpected": 0,
+  "connection_drops": 0,
+  "avg_latency_ms": 0.408,
+  "median_latency_ms": 0.367,
+  "p95_latency_ms": 0.584,
+  "p99_latency_ms": 1.204,
+  "throughput_rps": 2419.27,
+  "duration_sec": 20.667,
+  "throughput_buckets": {
+    "0": 2432,
+    "1": 2455,
+    "2": 2301,
+    "3": 2436,
+    "4": 2462,
+    "5": 2652,
+    "6": 2077,
+    "7": 2225,
+    "8": 2390,
+    "9": 1892,
+    "10": 2483,
+    "11": 2003,
+    "12": 2424,
+    "13": 2730,
+    "14": 2563,
+    "15": 2766,
+    "16": 2520,
+    "17": 2378,
+    "18": 2181,
+    "19": 2604,
+    "20": 2026
+  },
+  "duration_sec_wall": 20.694,
+  "plc_snapshot": {
+    "total_requests": 33335,
+    "by_function_code": {
+      "1": 5556,
+      "3": 5556,
+      "5": 5556,
+      "6": 5556,
+      "15": 5556,
+      "16": 5555
+    },
+    "register_50": 50,
+    "register_60": 60
+  }
+}

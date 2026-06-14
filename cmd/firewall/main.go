@@ -63,7 +63,9 @@ func runCommand(args []string) error {
 	configPath := fs.String("config", "./configs/config.yaml", "путь к config.yaml")
 	modeOverride := fs.String("mode", "", "override режима: observe|enforce")
 	policyPath := fs.String("policy", "./configs/policy.yaml", "путь к policy.yaml (используется в режиме enforce)")
+	candidatePolicyPath := fs.String("candidate-policy", "./configs/policy.candidate.yaml", "путь к candidate policy для dashboard generate/apply")
 	reloadInterval := fs.Duration("reload-interval", time.Second, "интервал hot reload config/policy")
+	dashboardAddr := fs.String("dashboard-addr", "", "адрес HTTP API dashboard, например :8080 (опционально)")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
@@ -113,7 +115,14 @@ func runCommand(args []string) error {
 		}
 	}()
 
-	svc := proxy.New(cfg, logger, policyEngine, eventStore, proxy.WithHotReload(*configPath, *policyPath, *reloadInterval))
+	options := []proxy.Option{
+		proxy.WithHotReload(*configPath, *policyPath, *reloadInterval),
+	}
+	if strings.TrimSpace(*dashboardAddr) != "" {
+		options = append(options, proxy.WithDashboard(*dashboardAddr, *configPath, *policyPath, *candidatePolicyPath))
+	}
+
+	svc := proxy.New(cfg, logger, policyEngine, eventStore, options...)
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()

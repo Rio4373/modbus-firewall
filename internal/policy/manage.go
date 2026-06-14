@@ -21,7 +21,7 @@ func ValidateFile(path string) (Policy, error) {
 	return policyCfg, nil
 }
 
-// ApplyCandidate атомарно заменяет active policy содержимым candidate.
+// ApplyCandidate атомарно заменяет active policy содержимым candidate и удаляет candidate после успешного approve.
 func ApplyCandidate(candidatePath string, activePath string) (Policy, error) {
 	if strings.TrimSpace(candidatePath) == "" {
 		return Policy{}, fmt.Errorf("путь к candidate policy обязателен")
@@ -30,7 +30,21 @@ func ApplyCandidate(candidatePath string, activePath string) (Policy, error) {
 		return Policy{}, fmt.Errorf("путь к active policy обязателен")
 	}
 
-	return copyPolicyAtomically(candidatePath, activePath, "candidate policy")
+	applied, err := copyPolicyAtomically(candidatePath, activePath, "candidate policy")
+	if err != nil {
+		return Policy{}, err
+	}
+	if err := os.WriteFile(approvedMarkerPath(activePath), []byte("approved\n"), 0o600); err != nil {
+		return Policy{}, fmt.Errorf("policy применена, но approve marker не записан: %w", err)
+	}
+	if err := os.Remove(candidatePath); err != nil && !os.IsNotExist(err) {
+		return Policy{}, fmt.Errorf("policy применена, но candidate policy не удалена: %w", err)
+	}
+	return applied, nil
+}
+
+func approvedMarkerPath(activePath string) string {
+	return activePath + ".approved"
 }
 
 // ResetCandidate атомарно восстанавливает candidate из baseline.

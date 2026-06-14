@@ -1,0 +1,5 @@
+plc_pid=81901
+81901 81750 Sat Apr 11 22:28:02 2026     /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/maratbagautdinov/Desktop/modbus-firewall/plc-sim/server.py --config /Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/testing/01_environment/runtime/plc-config.json
+
+firewall_pid=81913
+81913 81750 Sat Apr 11 22:28:03 2026     /Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/testing/01_environment/runtime/bin/firewall run --config /Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/testing/01_environment/runtime/config.yaml --policy /Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/testing/01_environment/runtime/policy.yaml --reload-interval 1s

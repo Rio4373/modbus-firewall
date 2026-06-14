@@ -1,8 +1,8 @@
 # Hot reload policy
 
-PID до: 24544
+PID до: 59400
 
-PID после: 24544
+PID после: 59400
 
 До обновления: blocked
 

@@ -1,0 +1,13 @@
+Рабочая директория: /Users/maratbagautdinov/Desktop/modbus-firewall
+Дата запуска: 2026-04-11 22:27:57 +04
+Git commit: cffcbbf
+
+Команды:
+go         /opt/homebrew/bin/go
+python3    /usr/bin/python3
+make       /usr/bin/make
+docker     /usr/local/bin/docker
+tcpdump    /usr/sbin/tcpdump
+rg         /Applications/Codex.app/Contents/Resources/rg
+awk        /usr/bin/awk
+sed        /usr/bin/sed

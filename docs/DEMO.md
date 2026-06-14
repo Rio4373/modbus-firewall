@@ -17,6 +17,85 @@
 make demo-all
 ```
 
+## Автоматический демонстрационный прогон с комментариями
+Если нужен один сценарий без ручного просмотра логов, используйте:
+
+```bash
+make demo-showcase
+```
+
+Что делает этот сценарий:
+- сам поднимает стенд;
+- прогоняет весь цикл `observe -> generate-policy -> replay -> enforce -> hot reload`;
+- печатает поясняющий вывод по каждому шагу;
+- автоматически показывает ключевые артефакты и подтверждения;
+- отдельно показывает признаки живого прогона:
+  - время запуска контейнеров;
+  - пустое состояние SQLite до трафика;
+  - свежие временные метки артефактов (`events.db`, `policy.candidate.yaml`, `replay-report.json`);
+- сохраняет итоговый отчёт в `reports/demo-showcase-report.txt`;
+- по умолчанию сам останавливает стенд и восстанавливает исходные `config.yaml` и `policy.yaml`.
+
+Если нужно оставить стенд запущенным после завершения:
+
+```bash
+KEEP_STAND_UP=1 make demo-showcase
+```
+
+## Проверенный Docker Compose сценарий
+Ниже сценарий, который был реально прогнан через `make demo-all`.
+
+Команды:
+```bash
+cd /Users/maratbagautdinov/Desktop/modbus-firewall
+make demo-all
+docker compose ps
+cat reports/replay-report.json
+docker compose logs --tail=80 firewall plc-sim
+python3 - <<'PY'
+import sqlite3
+path = "data/events.db"
+conn = sqlite3.connect(path)
+cur = conn.cursor()
+print("count =", cur.execute("select count(*) from modbus_events").fetchone()[0])
+print("by_fc =", cur.execute("select function_code, count(*) from modbus_events group by function_code order by function_code").fetchall())
+conn.close()
+PY
+```
+
+Что подтверждает успешный прогон:
+- `docker compose ps` показывает `arm-sim`, `firewall`, `plc-sim` в статусе `Up`.
+- `reports/replay-report.json` содержит `total_events=14`, `covered_events=13`, `blocked_events=1`.
+- `data/events.db` содержит итоговые события демо-цепочки.
+- `docker compose logs firewall plc-sim` показывает:
+  - старт `firewall` в `observe`;
+  - `hot reload успешно применен previous_mode=observe new_mode=enforce`;
+  - блокировку `forbidden-write`;
+  - повторный `hot reload` без рестарта;
+  - успешный write на `plc-sim` после новой policy.
+
+Ожидаемые артефакты после полного прогона:
+- `configs/policy.candidate.yaml`
+- `configs/policy.generated.yaml`
+- `configs/policy.yaml`
+- `data/events.db`
+- `reports/replay-report.json`
+
+## Локальный проверенный запуск без Docker
+В текущем репозитории есть единый локальный e2e-скрипт:
+
+```bash
+make demo-local
+```
+
+Что делает скрипт:
+- собирает локальные бинарники `firewall` и `arm-sim`;
+- поднимает `plc-sim` через локальный Python venv;
+- запускает цепочку `observe -> generate-policy -> replay -> apply-policy -> enforce -> hot reload`;
+- печатает пути к артефактам (`config`, `policy`, `SQLite`, `replay-report`, `firewall.log`, `plc-sim.log`).
+
+Этот путь полезен, когда Docker Compose недоступен или нужен быстрый автономный прогон на одной машине.
+
 ## Пошаговый запуск
 ```bash
 make demo-prepare

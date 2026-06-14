@@ -1,59 +1,59 @@
 {
   "direct": {
     "name": "latency-direct",
-    "requested": 60,
-    "processed": 60,
-    "allowed": 60,
+    "requested": 1000,
+    "processed": 1000,
+    "allowed": 0,
     "blocked": 0,
-    "errors": 0,
-    "unexpected": 0,
+    "errors": 1000,
+    "unexpected": 1000,
     "connection_drops": 0,
-    "avg_latency_ms": 0.153,
-    "median_latency_ms": 0.153,
-    "p95_latency_ms": 0.18,
-    "p99_latency_ms": 0.185,
-    "throughput_rps": 6196.8,
-    "duration_sec": 0.01,
+    "avg_latency_ms": 0.197,
+    "median_latency_ms": 0.188,
+    "p95_latency_ms": 0.236,
+    "p99_latency_ms": 0.416,
+    "throughput_rps": 4935.97,
+    "duration_sec": 0.203,
     "throughput_buckets": {
-      "0": 60
+      "0": 1000
     }
   },
   "observe": {
     "name": "latency-observe",
-    "requested": 60,
-    "processed": 60,
-    "allowed": 60,
+    "requested": 1000,
+    "processed": 1000,
+    "allowed": 1,
     "blocked": 0,
-    "errors": 0,
-    "unexpected": 0,
-    "connection_drops": 0,
-    "avg_latency_ms": 1.088,
-    "median_latency_ms": 0.918,
-    "p95_latency_ms": 3.079,
-    "p99_latency_ms": 3.703,
-    "throughput_rps": 898.95,
-    "duration_sec": 0.067,
+    "errors": 999,
+    "unexpected": 999,
+    "connection_drops": 1,
+    "avg_latency_ms": 0.312,
+    "median_latency_ms": 0.222,
+    "p95_latency_ms": 0.644,
+    "p99_latency_ms": 1.687,
+    "throughput_rps": 3115.43,
+    "duration_sec": 0.321,
     "throughput_buckets": {
-      "0": 60
+      "0": 1000
     }
   },
   "enforce": {
     "name": "latency-enforce",
-    "requested": 60,
-    "processed": 60,
-    "allowed": 60,
+    "requested": 1000,
+    "processed": 1000,
+    "allowed": 0,
     "blocked": 0,
-    "errors": 0,
-    "unexpected": 0,
+    "errors": 1000,
+    "unexpected": 1000,
     "connection_drops": 0,
-    "avg_latency_ms": 1.13,
-    "median_latency_ms": 0.752,
-    "p95_latency_ms": 3.834,
-    "p99_latency_ms": 5.263,
-    "throughput_rps": 862.4,
-    "duration_sec": 0.07,
+    "avg_latency_ms": 0.267,
+    "median_latency_ms": 0.206,
+    "p95_latency_ms": 0.54,
+    "p99_latency_ms": 1.409,
+    "throughput_rps": 3644.89,
+    "duration_sec": 0.274,
     "throughput_buckets": {
-      "0": 60
+      "0": 1000
     }
   }
 }

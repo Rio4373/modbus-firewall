@@ -1,0 +1,5 @@
+background_iterations=200
+requests_per_iteration=3
+expected_background_requests=600
+reload_mode=enforce_to_enforce
+policy_extension=allow_rare_write_range_80_81

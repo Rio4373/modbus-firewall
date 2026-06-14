@@ -39,8 +39,8 @@ rules:
     function_codes:
       - 6
     address_ranges:
-      - start: 1000
-        end: 1000
+      - start: 50
+        end: 50
 YAML
 
 compose exec -T firewall firewall validate-policy --policy ./configs/policy.candidate.yaml

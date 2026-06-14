@@ -1,0 +1,13 @@
+mode: enforce
+server:
+  listen_addr: "127.0.0.1:17503"
+proxy:
+  upstream_addr: "127.0.0.1:17502"
+  dial_timeout: "3s"
+  read_timeout: "5s"
+  write_timeout: "5s"
+logging:
+  level: "info"
+  format: "text"
+storage:
+  events_path: "/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/operational-tests-50k/runtime/events.db"

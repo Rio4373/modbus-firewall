@@ -1,0 +1,17 @@
+mode: enforce
+
+server:
+  listen_addr: "127.0.0.1:16020"
+
+proxy:
+  upstream_addr: "127.0.0.1:16021"
+  dial_timeout: "3s"
+  read_timeout: "5s"
+  write_timeout: "5s"
+
+logging:
+  level: "debug"
+  format: "text"
+
+storage:
+  events_path: "/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/testing/01_environment/runtime/events.db"

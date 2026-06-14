@@ -6,7 +6,7 @@ POLICY ?= ./configs/policy.yaml
 CANDIDATE_POLICY ?= ./configs/policy.candidate.yaml
 BASELINE_POLICY ?= ./configs/policy.generated.yaml
 
-.PHONY: build test run-observe run-enforce validate-config generate-policy validate-policy reset-candidate apply-policy replay stand-up stand-down stand-logs stand-arm-normal stand-arm-repeated stand-arm-rare stand-arm-forbidden demo-prepare demo-observe demo-generate-policy demo-replay demo-enforce demo-hot-reload demo-all test-load benchmark test-reliability generate-report operational-smoke
+.PHONY: build test run-observe run-enforce validate-config generate-policy validate-policy reset-candidate apply-policy replay stand-up stand-down stand-logs stand-arm-normal stand-arm-repeated stand-arm-rare stand-arm-forbidden dashboard-up dashboard-down dashboard-logs demo-reset demo-prepare demo-observe demo-generate-policy demo-replay demo-enforce demo-hot-reload demo-all demo-local demo-showcase test-load benchmark test-reliability generate-report operational-smoke test-dashboard-e2e
 
 build:
 	$(GO) build -o $(BINARY) ./cmd/firewall
@@ -59,6 +59,17 @@ stand-arm-rare:
 stand-arm-forbidden:
 	$(DOCKER_COMPOSE) exec -T arm-sim arm-sim --target firewall:1502 --scenario forbidden-write
 
+dashboard-up:
+	$(DOCKER_COMPOSE) up --build -d
+
+dashboard-down:
+	$(DOCKER_COMPOSE) down
+
+dashboard-logs:
+	$(DOCKER_COMPOSE) logs -f firewall dashboard plc-sim
+
+demo-reset: demo-prepare
+
 demo-prepare:
 	./scripts/demo/00_prepare.sh
 
@@ -80,6 +91,12 @@ demo-hot-reload:
 demo-all:
 	./scripts/demo/run_all.sh
 
+demo-local:
+	./scripts/demo/local_e2e.sh
+
+demo-showcase:
+	./scripts/demo/demo_showcase.sh
+
 test-load:
 	BENCHMARK_REQUESTS=$${BENCHMARK_REQUESTS:-500000} LATENCY_REQUESTS=$${LATENCY_REQUESTS:-3000} STABILITY_SECONDS=$${STABILITY_SECONDS:-60} ./scripts/testing/operational_benchmark.py
 
@@ -94,3 +111,6 @@ generate-report:
 
 operational-smoke:
 	BENCHMARK_REQUESTS=200 LATENCY_REQUESTS=60 STABILITY_SECONDS=2 ./scripts/testing/operational_benchmark.py
+
+test-dashboard-e2e:
+	python3 ./scripts/testing/dashboard_e2e.py

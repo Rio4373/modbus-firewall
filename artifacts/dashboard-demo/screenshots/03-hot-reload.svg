@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#080d13"/>
+  <rect x="48" y="42" width="1184" height="636" rx="8" fill="#101821" stroke="#263443"/>
+  <text x="84" y="94" fill="#f5f8fb" font-family="Arial" font-size="30" font-weight="700">Hot Reload Policy</text>
+  <text x="84" y="126" fill="#8796a8" font-family="Arial" font-size="16">New rules are applied without restarting the firewall process.</text>
+  <g font-family="Arial">
+    <rect x="84" y="170" width="330" height="130" rx="8" fill="#121d28" stroke="#263443"/>
+    <text x="112" y="214" fill="#8796a8" font-size="16">PID before</text>
+    <text x="112" y="260" fill="#d9e2ec" font-size="36" font-weight="700">24544</text>
+    <rect x="474" y="170" width="330" height="130" rx="8" fill="#121d28" stroke="#263443"/>
+    <text x="502" y="214" fill="#8796a8" font-size="16">PID after</text>
+    <text x="502" y="260" fill="#d9e2ec" font-size="36" font-weight="700">24544</text>
+    <rect x="864" y="170" width="330" height="130" rx="8" fill="#10291c" stroke="#2dd477"/>
+    <text x="892" y="214" fill="#8796a8" font-size="16">Restart detected</text>
+    <text x="892" y="260" fill="#2dd477" font-size="36" font-weight="700">NO</text>
+  </g>
+  <rect x="84" y="352" width="1110" height="220" rx="8" fill="#0d141c" stroke="#263443"/>
+  <text x="116" y="398" fill="#2dd477" font-family="Arial" font-size="18" font-weight="700">17:03:44 policy_generated</text>
+  <text x="116" y="430" fill="#d9e2ec" font-family="Arial" font-size="16">candidate policy сформирована автоматически</text>
+  <text x="116" y="478" fill="#2dd477" font-family="Arial" font-size="18" font-weight="700">17:03:45 policy_applied</text>
+  <text x="116" y="510" fill="#d9e2ec" font-family="Arial" font-size="16">active policy применена без restart</text>
+  <text x="116" y="558" fill="#2dd477" font-family="Arial" font-size="18" font-weight="700">17:03:46 policy_reload</text>
+  <text x="116" y="590" fill="#d9e2ec" font-family="Arial" font-size="16">новые правила начали применяться сразу</text>
+</svg>

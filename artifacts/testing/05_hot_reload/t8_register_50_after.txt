@@ -1,0 +1,6 @@
+timestamp_utc=2026-04-11T18:28:10.966207+00:00
+host=127.0.0.1
+port=16021
+unit_id=1
+address=50
+value=9999

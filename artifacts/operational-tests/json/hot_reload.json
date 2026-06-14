@@ -1,9 +1,9 @@
 {
-  "pid_before": 24544,
-  "pid_after": 24544,
+  "pid_before": 59400,
+  "pid_after": 59400,
   "restart_detected": false,
   "before_outcome": "blocked",
   "after_outcome": "allowed",
-  "reload_detected_sec": 1.209,
+  "reload_detected_sec": 1.21,
   "same_connection_policy_applied": true
 }

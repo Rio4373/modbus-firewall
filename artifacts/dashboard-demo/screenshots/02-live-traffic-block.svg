@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#080d13"/>
+  <rect x="40" y="42" width="1200" height="636" rx="8" fill="#101821" stroke="#263443"/>
+  <text x="72" y="92" fill="#f5f8fb" font-family="Arial" font-size="28" font-weight="700">Live Modbus Traffic</text>
+  <text x="72" y="122" fill="#8796a8" font-family="Arial" font-size="15">ALLOW and BLOCK decisions from the running firewall.</text>
+  <rect x="72" y="160" width="1136" height="46" fill="#0d141c"/>
+  <g font-family="Arial" font-size="14" font-weight="700" fill="#b6c2cf">
+    <text x="94" y="190">Time</text><text x="260" y="190">Src</text><text x="430" y="190">Dst</text><text x="600" y="190">FC</text><text x="720" y="190">Register</text><text x="900" y="190">Result</text><text x="1060" y="190">Latency</text>
+  </g>
+  <g font-family="Arial" font-size="14">
+    <rect x="72" y="206" width="1136" height="52" fill="#101821"/><text x="94" y="238" fill="#8796a8">12:01:11</text><text x="260" y="238" fill="#d9e2ec">10.10.0.2</text><text x="430" y="238" fill="#d9e2ec">10.10.0.3</text><text x="600" y="238" fill="#d9e2ec">FC03</text><text x="720" y="238" fill="#d9e2ec">0</text><rect x="900" y="218" width="76" height="28" rx="4" fill="#123621"/><text x="916" y="238" fill="#2dd477" font-weight="700">ALLOW</text><text x="1060" y="238" fill="#d9e2ec">0.74 ms</text>
+    <rect x="72" y="258" width="1136" height="52" fill="#121d28"/><text x="94" y="290" fill="#8796a8">12:01:12</text><text x="260" y="290" fill="#d9e2ec">10.10.0.2</text><text x="430" y="290" fill="#d9e2ec">10.10.0.3</text><text x="600" y="290" fill="#d9e2ec">FC06</text><text x="720" y="290" fill="#d9e2ec">50</text><rect x="900" y="270" width="76" height="28" rx="4" fill="#3a151d"/><text x="918" y="290" fill="#ff4f5e" font-weight="700">BLOCK</text><text x="1060" y="290" fill="#d9e2ec">0.39 ms</text>
+    <rect x="72" y="310" width="1136" height="52" fill="#101821"/><text x="94" y="342" fill="#8796a8">12:01:13</text><text x="260" y="342" fill="#d9e2ec">10.10.0.2</text><text x="430" y="342" fill="#d9e2ec">10.10.0.3</text><text x="600" y="342" fill="#d9e2ec">FC16</text><text x="720" y="342" fill="#d9e2ec">80</text><rect x="900" y="322" width="76" height="28" rx="4" fill="#3a151d"/><text x="918" y="342" fill="#ff4f5e" font-weight="700">BLOCK</text><text x="1060" y="342" fill="#d9e2ec">0.42 ms</text>
+  </g>
+  <text x="72" y="620" fill="#ff4f5e" font-family="Arial" font-size="22" font-weight="700">Forbidden Modbus write blocked before PLC</text>
+</svg>

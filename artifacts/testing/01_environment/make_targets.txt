@@ -1,0 +1,27 @@
+.PHONY: build test run-observe run-enforce validate-config generate-policy validate-policy reset-candidate apply-policy replay stand-up stand-down stand-logs stand-arm-normal stand-arm-repeated stand-arm-rare stand-arm-forbidden demo-prepare demo-observe demo-generate-policy demo-replay demo-enforce demo-hot-reload demo-all demo-local demo-showcase
+build:
+test:
+run-observe:
+run-enforce:
+validate-config:
+generate-policy:
+validate-policy:
+reset-candidate:
+apply-policy:
+replay:
+stand-up:
+stand-down:
+stand-logs:
+stand-arm-normal:
+stand-arm-repeated:
+stand-arm-rare:
+stand-arm-forbidden:
+demo-prepare:
+demo-observe:
+demo-generate-policy:
+demo-replay:
+demo-enforce:
+demo-hot-reload:
+demo-all:
+demo-local:
+demo-showcase:

@@ -1,0 +1,70 @@
+{
+  "started_at": "2026-06-11T20:06:57+00:00",
+  "api_base": "http://127.0.0.1:18080",
+  "dashboard_url": "http://127.0.0.1:3000",
+  "checks": [
+    {
+      "name": "История событий очищена с backup предыдущей БД",
+      "passed": true,
+      "details": [
+        "/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/dashboard-e2e/backups/20260611T200657Z/events.db"
+      ]
+    },
+    {
+      "name": "API доступен и firewall online",
+      "passed": true,
+      "details": {
+        "active_connections": 0,
+        "active_policy": "policy.yaml",
+        "active_policy_id": "active",
+        "connection_losses": 0,
+        "last_policy_apply_time": "2026-06-11T20:04:36.087235166Z",
+        "mode": "ANALYZE",
+        "pid": 1,
+        "policy_rules": 3,
+        "policy_version": 1,
+        "raw_mode": "observe",
+        "status": "online",
+        "uptime_sec": 0
+      }
+    },
+    {
+      "name": "E2E остановлен из-за ошибки",
+      "passed": false,
+      "details": "dashboard root markup not found"
+    }
+  ],
+  "reset_state": true,
+  "state_backups": [
+    "/Users/maratbagautdinov/Desktop/modbus-firewall/artifacts/dashboard-e2e/backups/20260611T200657Z/events.db"
+  ],
+  "final_status": {
+    "active_connections": 0,
+    "active_policy": "policy.yaml",
+    "active_policy_id": "active",
+    "connection_losses": 0,
+    "last_policy_apply_time": "2026-06-11T20:04:36.087235166Z",
+    "mode": "ANALYZE",
+    "pid": 1,
+    "policy_rules": 3,
+    "policy_version": 1,
+    "raw_mode": "observe",
+    "status": "online",
+    "uptime_sec": 0
+  },
+  "final_metrics": {
+    "active_connections": 0,
+    "allowed_requests": 0,
+    "avg_latency_ms": 0,
+    "blocked_requests": 0,
+    "blocked_sec": 0,
+    "connection_losses": 0,
+    "errors": 0,
+    "p95_latency_ms": 0,
+    "p99_latency_ms": 0,
+    "processed_requests": 0,
+    "requests_sec": 0,
+    "traffic": []
+  },
+  "finished_at": "2026-06-11T20:06:59+00:00"
+}

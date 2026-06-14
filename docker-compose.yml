@@ -25,10 +25,24 @@ services:
       - ./reports:/app/reports
     ports:
       - "1502:1502"
-    command: ["run", "--config", "./configs/config.yaml", "--policy", "./configs/policy.yaml", "--reload-interval", "1s"]
+      - "18080:8080"
+    command: ["run", "--config", "./configs/config.yaml", "--policy", "./configs/policy.yaml", "--candidate-policy", "./configs/policy.candidate.yaml", "--reload-interval", "1s", "--dashboard-addr", "0.0.0.0:8080"]
     networks:
       modbus-net:
         ipv4_address: 10.10.0.4
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: deployments/docker-compose/Dockerfile.dashboard
+    container_name: modbus-dashboard
+    depends_on:
+      - firewall
+    ports:
+      - "3000:80"
+    networks:
+      modbus-net:
+        ipv4_address: 10.10.0.6
 
   arm-sim:
     build:

@@ -104,7 +104,7 @@ func buildRareWriteOperations(unitID uint8) []Operation {
 // buildForbiddenWriteOperations формирует запись в адрес, который обычно не разрешен policy.
 func buildForbiddenWriteOperations(unitID uint8) []Operation {
 	return []Operation{
-		newWriteSingleRegisterOp(1, unitID, "forbidden-write-1", 1000, 9999),
+		newWriteSingleRegisterOp(1, unitID, "forbidden-write-1", 50, 9999),
 	}
 }
 

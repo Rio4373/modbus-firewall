@@ -40,7 +40,7 @@ cmd/arm-sim/                # ARM simulator / test client CLI
 internal/armsim/            # сценарии ARM-клиента и Modbus TCP клиент
 internal/config/            # загрузка и валидация config.yaml
 internal/modbus/            # parser Modbus TCP
-internal/storage/           # SQLite storage без ORM
+internal/storage/           # SQLite storage 
 internal/policy/            # policy model, loader, matcher, apply/reset
 internal/proxy/             # TCP proxy, observe/enforce, hot reload
 internal/generator/         # генерация policy из событий
@@ -80,6 +80,7 @@ Make targets:
 - `make stand-arm-rare`
 - `make stand-arm-forbidden`
 - `make demo-all`
+- `make demo-showcase`
 - `make demo-prepare`
 - `make demo-observe`
 - `make demo-generate-policy`
@@ -174,6 +175,11 @@ PLC simulator (PyModbus):
 Для полного воспроизводимого прогона всех этапов:
 - `make demo-all`
 
+Для автоматического демонстрационного прогона с поясняющим выводом и итоговым отчётом:
+- `make demo-showcase`
+  - Отчёт сохраняется в `./reports/demo-showcase-report.txt`
+  - По умолчанию стенд после завершения автоматически останавливается
+
 Пошагово:
 - `make demo-prepare`
 - `make demo-observe`
@@ -223,4 +229,3 @@ PLC simulator (PyModbus):
 ## Качество и проверки
 - Unit/integration tests: `go test ./...`
 - Стиль и формат: `gofmt -w` (при изменениях)
-- Текущая реализация ориентирована на простой и надёжный MVP без лишних абстракций.

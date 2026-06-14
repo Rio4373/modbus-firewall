@@ -1,201 +1,201 @@
 timestamp_utc,test,seq,operation,fc,address,quantity,expected,outcome,latency_ms,detail
-2026-05-17T13:06:02.440+00:00,forbidden-operations,1,deny-fc03-register-range,3,300,4,blocked,blocked,0.425,exception_code=1
-2026-05-17T13:06:02.441+00:00,forbidden-operations,2,deny-fc06-register,6,60,1,blocked,blocked,0.435,exception_code=1
-2026-05-17T13:06:02.441+00:00,forbidden-operations,3,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.499,exception_code=1
-2026-05-17T13:06:02.442+00:00,forbidden-operations,4,deny-invalid-quantity,3,0,0,blocked,blocked,0.189,connection_closed_safe_deny
-2026-05-17T13:06:02.442+00:00,forbidden-operations,5,deny-fc03-register-range,3,300,4,blocked,blocked,0.442,exception_code=1
-2026-05-17T13:06:02.442+00:00,forbidden-operations,6,deny-fc06-register,6,60,1,blocked,blocked,0.454,exception_code=1
-2026-05-17T13:06:02.443+00:00,forbidden-operations,7,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.463,exception_code=1
-2026-05-17T13:06:02.443+00:00,forbidden-operations,8,deny-invalid-quantity,3,0,0,blocked,blocked,0.185,connection_closed_safe_deny
-2026-05-17T13:06:02.444+00:00,forbidden-operations,9,deny-fc03-register-range,3,300,4,blocked,blocked,0.460,exception_code=1
-2026-05-17T13:06:02.444+00:00,forbidden-operations,10,deny-fc06-register,6,60,1,blocked,blocked,0.464,exception_code=1
-2026-05-17T13:06:02.444+00:00,forbidden-operations,11,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.439,exception_code=1
-2026-05-17T13:06:02.445+00:00,forbidden-operations,12,deny-invalid-quantity,3,0,0,blocked,blocked,0.172,connection_closed_safe_deny
-2026-05-17T13:06:02.445+00:00,forbidden-operations,13,deny-fc03-register-range,3,300,4,blocked,blocked,0.413,exception_code=1
-2026-05-17T13:06:02.446+00:00,forbidden-operations,14,deny-fc06-register,6,60,1,blocked,blocked,0.440,exception_code=1
-2026-05-17T13:06:02.446+00:00,forbidden-operations,15,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.480,exception_code=1
-2026-05-17T13:06:02.446+00:00,forbidden-operations,16,deny-invalid-quantity,3,0,0,blocked,blocked,0.190,connection_closed_safe_deny
-2026-05-17T13:06:02.447+00:00,forbidden-operations,17,deny-fc03-register-range,3,300,4,blocked,blocked,0.473,exception_code=1
-2026-05-17T13:06:02.447+00:00,forbidden-operations,18,deny-fc06-register,6,60,1,blocked,blocked,0.466,exception_code=1
-2026-05-17T13:06:02.448+00:00,forbidden-operations,19,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.489,exception_code=1
-2026-05-17T13:06:02.448+00:00,forbidden-operations,20,deny-invalid-quantity,3,0,0,blocked,blocked,0.185,connection_closed_safe_deny
-2026-05-17T13:06:02.448+00:00,forbidden-operations,21,deny-fc03-register-range,3,300,4,blocked,blocked,0.414,exception_code=1
-2026-05-17T13:06:02.449+00:00,forbidden-operations,22,deny-fc06-register,6,60,1,blocked,blocked,0.517,exception_code=1
-2026-05-17T13:06:02.449+00:00,forbidden-operations,23,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.569,exception_code=1
-2026-05-17T13:06:02.450+00:00,forbidden-operations,24,deny-invalid-quantity,3,0,0,blocked,blocked,0.196,connection_closed_safe_deny
-2026-05-17T13:06:02.450+00:00,forbidden-operations,25,deny-fc03-register-range,3,300,4,blocked,blocked,0.403,exception_code=1
-2026-05-17T13:06:02.450+00:00,forbidden-operations,26,deny-fc06-register,6,60,1,blocked,blocked,0.454,exception_code=1
-2026-05-17T13:06:02.451+00:00,forbidden-operations,27,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.547,exception_code=1
-2026-05-17T13:06:02.451+00:00,forbidden-operations,28,deny-invalid-quantity,3,0,0,blocked,blocked,0.176,connection_closed_safe_deny
-2026-05-17T13:06:02.452+00:00,forbidden-operations,29,deny-fc03-register-range,3,300,4,blocked,blocked,0.449,exception_code=1
-2026-05-17T13:06:02.452+00:00,forbidden-operations,30,deny-fc06-register,6,60,1,blocked,blocked,0.447,exception_code=1
-2026-05-17T13:06:02.453+00:00,forbidden-operations,31,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.553,exception_code=1
-2026-05-17T13:06:02.453+00:00,forbidden-operations,32,deny-invalid-quantity,3,0,0,blocked,blocked,0.190,connection_closed_safe_deny
-2026-05-17T13:06:02.453+00:00,forbidden-operations,33,deny-fc03-register-range,3,300,4,blocked,blocked,0.527,exception_code=1
-2026-05-17T13:06:02.454+00:00,forbidden-operations,34,deny-fc06-register,6,60,1,blocked,blocked,0.444,exception_code=1
-2026-05-17T13:06:02.454+00:00,forbidden-operations,35,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.449,exception_code=1
-2026-05-17T13:06:02.454+00:00,forbidden-operations,36,deny-invalid-quantity,3,0,0,blocked,blocked,0.171,connection_closed_safe_deny
-2026-05-17T13:06:02.455+00:00,forbidden-operations,37,deny-fc03-register-range,3,300,4,blocked,blocked,0.398,exception_code=1
-2026-05-17T13:06:02.455+00:00,forbidden-operations,38,deny-fc06-register,6,60,1,blocked,blocked,0.489,exception_code=1
-2026-05-17T13:06:02.456+00:00,forbidden-operations,39,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.487,exception_code=1
-2026-05-17T13:06:02.456+00:00,forbidden-operations,40,deny-invalid-quantity,3,0,0,blocked,blocked,0.162,connection_closed_safe_deny
-2026-05-17T13:06:02.456+00:00,forbidden-operations,41,deny-fc03-register-range,3,300,4,blocked,blocked,0.389,exception_code=1
-2026-05-17T13:06:02.457+00:00,forbidden-operations,42,deny-fc06-register,6,60,1,blocked,blocked,0.438,exception_code=1
-2026-05-17T13:06:02.457+00:00,forbidden-operations,43,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.468,exception_code=1
-2026-05-17T13:06:02.457+00:00,forbidden-operations,44,deny-invalid-quantity,3,0,0,blocked,blocked,0.191,connection_closed_safe_deny
-2026-05-17T13:06:02.458+00:00,forbidden-operations,45,deny-fc03-register-range,3,300,4,blocked,blocked,0.469,exception_code=1
-2026-05-17T13:06:02.458+00:00,forbidden-operations,46,deny-fc06-register,6,60,1,blocked,blocked,0.446,exception_code=1
-2026-05-17T13:06:02.460+00:00,forbidden-operations,47,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,1.519,exception_code=1
-2026-05-17T13:06:02.460+00:00,forbidden-operations,48,deny-invalid-quantity,3,0,0,blocked,blocked,0.236,connection_closed_safe_deny
-2026-05-17T13:06:02.461+00:00,forbidden-operations,49,deny-fc03-register-range,3,300,4,blocked,blocked,0.467,exception_code=1
-2026-05-17T13:06:02.461+00:00,forbidden-operations,50,deny-fc06-register,6,60,1,blocked,blocked,0.648,exception_code=1
-2026-05-17T13:06:02.462+00:00,forbidden-operations,51,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.587,exception_code=1
-2026-05-17T13:06:02.462+00:00,forbidden-operations,52,deny-invalid-quantity,3,0,0,blocked,blocked,0.193,connection_closed_safe_deny
-2026-05-17T13:06:02.463+00:00,forbidden-operations,53,deny-fc03-register-range,3,300,4,blocked,blocked,0.873,exception_code=1
-2026-05-17T13:06:02.464+00:00,forbidden-operations,54,deny-fc06-register,6,60,1,blocked,blocked,0.667,exception_code=1
-2026-05-17T13:06:02.464+00:00,forbidden-operations,55,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.477,exception_code=1
-2026-05-17T13:06:02.464+00:00,forbidden-operations,56,deny-invalid-quantity,3,0,0,blocked,blocked,0.212,connection_closed_safe_deny
-2026-05-17T13:06:02.465+00:00,forbidden-operations,57,deny-fc03-register-range,3,300,4,blocked,blocked,0.440,exception_code=1
-2026-05-17T13:06:02.465+00:00,forbidden-operations,58,deny-fc06-register,6,60,1,blocked,blocked,0.497,exception_code=1
-2026-05-17T13:06:02.466+00:00,forbidden-operations,59,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.483,exception_code=1
-2026-05-17T13:06:02.466+00:00,forbidden-operations,60,deny-invalid-quantity,3,0,0,blocked,blocked,0.192,connection_closed_safe_deny
-2026-05-17T13:06:02.466+00:00,forbidden-operations,61,deny-fc03-register-range,3,300,4,blocked,blocked,0.460,exception_code=1
-2026-05-17T13:06:02.467+00:00,forbidden-operations,62,deny-fc06-register,6,60,1,blocked,blocked,0.541,exception_code=1
-2026-05-17T13:06:02.467+00:00,forbidden-operations,63,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.490,exception_code=1
-2026-05-17T13:06:02.468+00:00,forbidden-operations,64,deny-invalid-quantity,3,0,0,blocked,blocked,0.192,connection_closed_safe_deny
-2026-05-17T13:06:02.468+00:00,forbidden-operations,65,deny-fc03-register-range,3,300,4,blocked,blocked,0.440,exception_code=1
-2026-05-17T13:06:02.469+00:00,forbidden-operations,66,deny-fc06-register,6,60,1,blocked,blocked,0.824,exception_code=1
-2026-05-17T13:06:02.472+00:00,forbidden-operations,67,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,2.958,exception_code=1
-2026-05-17T13:06:02.472+00:00,forbidden-operations,68,deny-invalid-quantity,3,0,0,blocked,blocked,0.205,connection_closed_safe_deny
-2026-05-17T13:06:02.473+00:00,forbidden-operations,69,deny-fc03-register-range,3,300,4,blocked,blocked,0.397,exception_code=1
-2026-05-17T13:06:02.473+00:00,forbidden-operations,70,deny-fc06-register,6,60,1,blocked,blocked,0.456,exception_code=1
-2026-05-17T13:06:02.473+00:00,forbidden-operations,71,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.461,exception_code=1
-2026-05-17T13:06:02.474+00:00,forbidden-operations,72,deny-invalid-quantity,3,0,0,blocked,blocked,0.204,connection_closed_safe_deny
-2026-05-17T13:06:02.474+00:00,forbidden-operations,73,deny-fc03-register-range,3,300,4,blocked,blocked,0.412,exception_code=1
-2026-05-17T13:06:02.475+00:00,forbidden-operations,74,deny-fc06-register,6,60,1,blocked,blocked,0.458,exception_code=1
-2026-05-17T13:06:02.475+00:00,forbidden-operations,75,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.500,exception_code=1
-2026-05-17T13:06:02.475+00:00,forbidden-operations,76,deny-invalid-quantity,3,0,0,blocked,blocked,0.179,connection_closed_safe_deny
-2026-05-17T13:06:02.476+00:00,forbidden-operations,77,deny-fc03-register-range,3,300,4,blocked,blocked,0.399,exception_code=1
-2026-05-17T13:06:02.476+00:00,forbidden-operations,78,deny-fc06-register,6,60,1,blocked,blocked,0.456,exception_code=1
-2026-05-17T13:06:02.477+00:00,forbidden-operations,79,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.426,exception_code=1
-2026-05-17T13:06:02.477+00:00,forbidden-operations,80,deny-invalid-quantity,3,0,0,blocked,blocked,0.163,connection_closed_safe_deny
-2026-05-17T13:06:02.477+00:00,forbidden-operations,81,deny-fc03-register-range,3,300,4,blocked,blocked,0.399,exception_code=1
-2026-05-17T13:06:02.478+00:00,forbidden-operations,82,deny-fc06-register,6,60,1,blocked,blocked,0.421,exception_code=1
-2026-05-17T13:06:02.478+00:00,forbidden-operations,83,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.406,exception_code=1
-2026-05-17T13:06:02.478+00:00,forbidden-operations,84,deny-invalid-quantity,3,0,0,blocked,blocked,0.162,connection_closed_safe_deny
-2026-05-17T13:06:02.479+00:00,forbidden-operations,85,deny-fc03-register-range,3,300,4,blocked,blocked,0.415,exception_code=1
-2026-05-17T13:06:02.479+00:00,forbidden-operations,86,deny-fc06-register,6,60,1,blocked,blocked,0.491,exception_code=1
-2026-05-17T13:06:02.480+00:00,forbidden-operations,87,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.469,exception_code=1
-2026-05-17T13:06:02.480+00:00,forbidden-operations,88,deny-invalid-quantity,3,0,0,blocked,blocked,0.200,connection_closed_safe_deny
-2026-05-17T13:06:02.480+00:00,forbidden-operations,89,deny-fc03-register-range,3,300,4,blocked,blocked,0.395,exception_code=1
-2026-05-17T13:06:02.481+00:00,forbidden-operations,90,deny-fc06-register,6,60,1,blocked,blocked,0.481,exception_code=1
-2026-05-17T13:06:02.481+00:00,forbidden-operations,91,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.486,exception_code=1
-2026-05-17T13:06:02.481+00:00,forbidden-operations,92,deny-invalid-quantity,3,0,0,blocked,blocked,0.196,connection_closed_safe_deny
-2026-05-17T13:06:02.482+00:00,forbidden-operations,93,deny-fc03-register-range,3,300,4,blocked,blocked,0.528,exception_code=1
-2026-05-17T13:06:02.482+00:00,forbidden-operations,94,deny-fc06-register,6,60,1,blocked,blocked,0.459,exception_code=1
-2026-05-17T13:06:02.483+00:00,forbidden-operations,95,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.461,exception_code=1
-2026-05-17T13:06:02.483+00:00,forbidden-operations,96,deny-invalid-quantity,3,0,0,blocked,blocked,0.197,connection_closed_safe_deny
-2026-05-17T13:06:02.483+00:00,forbidden-operations,97,deny-fc03-register-range,3,300,4,blocked,blocked,0.420,exception_code=1
-2026-05-17T13:06:02.484+00:00,forbidden-operations,98,deny-fc06-register,6,60,1,blocked,blocked,0.431,exception_code=1
-2026-05-17T13:06:02.484+00:00,forbidden-operations,99,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.602,exception_code=1
-2026-05-17T13:06:02.485+00:00,forbidden-operations,100,deny-invalid-quantity,3,0,0,blocked,blocked,0.194,connection_closed_safe_deny
-2026-05-17T13:06:02.485+00:00,forbidden-operations,101,deny-fc03-register-range,3,300,4,blocked,blocked,0.421,exception_code=1
-2026-05-17T13:06:02.486+00:00,forbidden-operations,102,deny-fc06-register,6,60,1,blocked,blocked,0.471,exception_code=1
-2026-05-17T13:06:02.486+00:00,forbidden-operations,103,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.461,exception_code=1
-2026-05-17T13:06:02.486+00:00,forbidden-operations,104,deny-invalid-quantity,3,0,0,blocked,blocked,0.203,connection_closed_safe_deny
-2026-05-17T13:06:02.487+00:00,forbidden-operations,105,deny-fc03-register-range,3,300,4,blocked,blocked,0.439,exception_code=1
-2026-05-17T13:06:02.487+00:00,forbidden-operations,106,deny-fc06-register,6,60,1,blocked,blocked,0.474,exception_code=1
-2026-05-17T13:06:02.488+00:00,forbidden-operations,107,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.462,exception_code=1
-2026-05-17T13:06:02.488+00:00,forbidden-operations,108,deny-invalid-quantity,3,0,0,blocked,blocked,0.197,connection_closed_safe_deny
-2026-05-17T13:06:02.488+00:00,forbidden-operations,109,deny-fc03-register-range,3,300,4,blocked,blocked,0.449,exception_code=1
-2026-05-17T13:06:02.489+00:00,forbidden-operations,110,deny-fc06-register,6,60,1,blocked,blocked,0.557,exception_code=1
-2026-05-17T13:06:02.489+00:00,forbidden-operations,111,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.490,exception_code=1
-2026-05-17T13:06:02.490+00:00,forbidden-operations,112,deny-invalid-quantity,3,0,0,blocked,blocked,0.232,connection_closed_safe_deny
-2026-05-17T13:06:02.490+00:00,forbidden-operations,113,deny-fc03-register-range,3,300,4,blocked,blocked,0.415,exception_code=1
-2026-05-17T13:06:02.491+00:00,forbidden-operations,114,deny-fc06-register,6,60,1,blocked,blocked,0.543,exception_code=1
-2026-05-17T13:06:02.491+00:00,forbidden-operations,115,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.463,exception_code=1
-2026-05-17T13:06:02.491+00:00,forbidden-operations,116,deny-invalid-quantity,3,0,0,blocked,blocked,0.206,connection_closed_safe_deny
-2026-05-17T13:06:02.492+00:00,forbidden-operations,117,deny-fc03-register-range,3,300,4,blocked,blocked,0.437,exception_code=1
-2026-05-17T13:06:02.492+00:00,forbidden-operations,118,deny-fc06-register,6,60,1,blocked,blocked,0.499,exception_code=1
-2026-05-17T13:06:02.493+00:00,forbidden-operations,119,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.471,exception_code=1
-2026-05-17T13:06:02.493+00:00,forbidden-operations,120,deny-invalid-quantity,3,0,0,blocked,blocked,0.187,connection_closed_safe_deny
-2026-05-17T13:06:02.493+00:00,forbidden-operations,121,deny-fc03-register-range,3,300,4,blocked,blocked,0.417,exception_code=1
-2026-05-17T13:06:02.494+00:00,forbidden-operations,122,deny-fc06-register,6,60,1,blocked,blocked,0.414,exception_code=1
-2026-05-17T13:06:02.494+00:00,forbidden-operations,123,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.538,exception_code=1
-2026-05-17T13:06:02.494+00:00,forbidden-operations,124,deny-invalid-quantity,3,0,0,blocked,blocked,0.183,connection_closed_safe_deny
-2026-05-17T13:06:02.495+00:00,forbidden-operations,125,deny-fc03-register-range,3,300,4,blocked,blocked,0.434,exception_code=1
-2026-05-17T13:06:02.495+00:00,forbidden-operations,126,deny-fc06-register,6,60,1,blocked,blocked,0.481,exception_code=1
-2026-05-17T13:06:02.496+00:00,forbidden-operations,127,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.415,exception_code=1
-2026-05-17T13:06:02.496+00:00,forbidden-operations,128,deny-invalid-quantity,3,0,0,blocked,blocked,0.185,connection_closed_safe_deny
-2026-05-17T13:06:02.496+00:00,forbidden-operations,129,deny-fc03-register-range,3,300,4,blocked,blocked,0.427,exception_code=1
-2026-05-17T13:06:02.497+00:00,forbidden-operations,130,deny-fc06-register,6,60,1,blocked,blocked,0.490,exception_code=1
-2026-05-17T13:06:02.497+00:00,forbidden-operations,131,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.530,exception_code=1
-2026-05-17T13:06:02.498+00:00,forbidden-operations,132,deny-invalid-quantity,3,0,0,blocked,blocked,0.214,connection_closed_safe_deny
-2026-05-17T13:06:02.498+00:00,forbidden-operations,133,deny-fc03-register-range,3,300,4,blocked,blocked,0.535,exception_code=1
-2026-05-17T13:06:02.499+00:00,forbidden-operations,134,deny-fc06-register,6,60,1,blocked,blocked,0.582,exception_code=1
-2026-05-17T13:06:02.499+00:00,forbidden-operations,135,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.557,exception_code=1
-2026-05-17T13:06:02.500+00:00,forbidden-operations,136,deny-invalid-quantity,3,0,0,blocked,blocked,0.192,connection_closed_safe_deny
-2026-05-17T13:06:02.500+00:00,forbidden-operations,137,deny-fc03-register-range,3,300,4,blocked,blocked,0.423,exception_code=1
-2026-05-17T13:06:02.500+00:00,forbidden-operations,138,deny-fc06-register,6,60,1,blocked,blocked,0.443,exception_code=1
-2026-05-17T13:06:02.501+00:00,forbidden-operations,139,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.523,exception_code=1
-2026-05-17T13:06:02.501+00:00,forbidden-operations,140,deny-invalid-quantity,3,0,0,blocked,blocked,0.198,connection_closed_safe_deny
-2026-05-17T13:06:02.502+00:00,forbidden-operations,141,deny-fc03-register-range,3,300,4,blocked,blocked,0.427,exception_code=1
-2026-05-17T13:06:02.502+00:00,forbidden-operations,142,deny-fc06-register,6,60,1,blocked,blocked,0.550,exception_code=1
-2026-05-17T13:06:02.503+00:00,forbidden-operations,143,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.418,exception_code=1
-2026-05-17T13:06:02.503+00:00,forbidden-operations,144,deny-invalid-quantity,3,0,0,blocked,blocked,0.181,connection_closed_safe_deny
-2026-05-17T13:06:02.503+00:00,forbidden-operations,145,deny-fc03-register-range,3,300,4,blocked,blocked,0.391,exception_code=1
-2026-05-17T13:06:02.504+00:00,forbidden-operations,146,deny-fc06-register,6,60,1,blocked,blocked,0.431,exception_code=1
-2026-05-17T13:06:02.504+00:00,forbidden-operations,147,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.480,exception_code=1
-2026-05-17T13:06:02.504+00:00,forbidden-operations,148,deny-invalid-quantity,3,0,0,blocked,blocked,0.209,connection_closed_safe_deny
-2026-05-17T13:06:02.505+00:00,forbidden-operations,149,deny-fc03-register-range,3,300,4,blocked,blocked,0.425,exception_code=1
-2026-05-17T13:06:02.505+00:00,forbidden-operations,150,deny-fc06-register,6,60,1,blocked,blocked,0.445,exception_code=1
-2026-05-17T13:06:02.506+00:00,forbidden-operations,151,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.494,exception_code=1
-2026-05-17T13:06:02.506+00:00,forbidden-operations,152,deny-invalid-quantity,3,0,0,blocked,blocked,0.186,connection_closed_safe_deny
-2026-05-17T13:06:02.506+00:00,forbidden-operations,153,deny-fc03-register-range,3,300,4,blocked,blocked,0.403,exception_code=1
-2026-05-17T13:06:02.507+00:00,forbidden-operations,154,deny-fc06-register,6,60,1,blocked,blocked,0.491,exception_code=1
-2026-05-17T13:06:02.507+00:00,forbidden-operations,155,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.450,exception_code=1
-2026-05-17T13:06:02.507+00:00,forbidden-operations,156,deny-invalid-quantity,3,0,0,blocked,blocked,0.175,connection_closed_safe_deny
-2026-05-17T13:06:02.508+00:00,forbidden-operations,157,deny-fc03-register-range,3,300,4,blocked,blocked,0.424,exception_code=1
-2026-05-17T13:06:02.508+00:00,forbidden-operations,158,deny-fc06-register,6,60,1,blocked,blocked,0.422,exception_code=1
-2026-05-17T13:06:02.509+00:00,forbidden-operations,159,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.407,exception_code=1
-2026-05-17T13:06:02.509+00:00,forbidden-operations,160,deny-invalid-quantity,3,0,0,blocked,blocked,0.199,connection_closed_safe_deny
-2026-05-17T13:06:02.509+00:00,forbidden-operations,161,deny-fc03-register-range,3,300,4,blocked,blocked,0.448,exception_code=1
-2026-05-17T13:06:02.510+00:00,forbidden-operations,162,deny-fc06-register,6,60,1,blocked,blocked,0.458,exception_code=1
-2026-05-17T13:06:02.510+00:00,forbidden-operations,163,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.447,exception_code=1
-2026-05-17T13:06:02.510+00:00,forbidden-operations,164,deny-invalid-quantity,3,0,0,blocked,blocked,0.187,connection_closed_safe_deny
-2026-05-17T13:06:02.511+00:00,forbidden-operations,165,deny-fc03-register-range,3,300,4,blocked,blocked,0.394,exception_code=1
-2026-05-17T13:06:02.511+00:00,forbidden-operations,166,deny-fc06-register,6,60,1,blocked,blocked,0.508,exception_code=1
-2026-05-17T13:06:02.512+00:00,forbidden-operations,167,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.450,exception_code=1
-2026-05-17T13:06:02.512+00:00,forbidden-operations,168,deny-invalid-quantity,3,0,0,blocked,blocked,0.196,connection_closed_safe_deny
-2026-05-17T13:06:02.512+00:00,forbidden-operations,169,deny-fc03-register-range,3,300,4,blocked,blocked,0.429,exception_code=1
-2026-05-17T13:06:02.513+00:00,forbidden-operations,170,deny-fc06-register,6,60,1,blocked,blocked,0.452,exception_code=1
-2026-05-17T13:06:02.513+00:00,forbidden-operations,171,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.481,exception_code=1
-2026-05-17T13:06:02.514+00:00,forbidden-operations,172,deny-invalid-quantity,3,0,0,blocked,blocked,0.197,connection_closed_safe_deny
-2026-05-17T13:06:02.514+00:00,forbidden-operations,173,deny-fc03-register-range,3,300,4,blocked,blocked,0.383,exception_code=1
-2026-05-17T13:06:02.514+00:00,forbidden-operations,174,deny-fc06-register,6,60,1,blocked,blocked,0.408,exception_code=1
-2026-05-17T13:06:02.515+00:00,forbidden-operations,175,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.388,exception_code=1
-2026-05-17T13:06:02.515+00:00,forbidden-operations,176,deny-invalid-quantity,3,0,0,blocked,blocked,0.176,connection_closed_safe_deny
-2026-05-17T13:06:02.515+00:00,forbidden-operations,177,deny-fc03-register-range,3,300,4,blocked,blocked,0.360,exception_code=1
-2026-05-17T13:06:02.516+00:00,forbidden-operations,178,deny-fc06-register,6,60,1,blocked,blocked,0.409,exception_code=1
-2026-05-17T13:06:02.516+00:00,forbidden-operations,179,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.423,exception_code=1
-2026-05-17T13:06:02.516+00:00,forbidden-operations,180,deny-invalid-quantity,3,0,0,blocked,blocked,0.207,connection_closed_safe_deny
-2026-05-17T13:06:02.517+00:00,forbidden-operations,181,deny-fc03-register-range,3,300,4,blocked,blocked,0.407,exception_code=1
-2026-05-17T13:06:02.517+00:00,forbidden-operations,182,deny-fc06-register,6,60,1,blocked,blocked,0.456,exception_code=1
-2026-05-17T13:06:02.518+00:00,forbidden-operations,183,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.438,exception_code=1
-2026-05-17T13:06:02.518+00:00,forbidden-operations,184,deny-invalid-quantity,3,0,0,blocked,blocked,0.220,connection_closed_safe_deny
-2026-05-17T13:06:02.518+00:00,forbidden-operations,185,deny-fc03-register-range,3,300,4,blocked,blocked,0.420,exception_code=1
-2026-05-17T13:06:02.519+00:00,forbidden-operations,186,deny-fc06-register,6,60,1,blocked,blocked,0.435,exception_code=1
-2026-05-17T13:06:02.519+00:00,forbidden-operations,187,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.468,exception_code=1
-2026-05-17T13:06:02.519+00:00,forbidden-operations,188,deny-invalid-quantity,3,0,0,blocked,blocked,0.196,connection_closed_safe_deny
-2026-05-17T13:06:02.520+00:00,forbidden-operations,189,deny-fc03-register-range,3,300,4,blocked,blocked,0.373,exception_code=1
-2026-05-17T13:06:02.520+00:00,forbidden-operations,190,deny-fc06-register,6,60,1,blocked,blocked,0.397,exception_code=1
-2026-05-17T13:06:02.521+00:00,forbidden-operations,191,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.387,exception_code=1
-2026-05-17T13:06:02.521+00:00,forbidden-operations,192,deny-invalid-quantity,3,0,0,blocked,blocked,0.177,connection_closed_safe_deny
-2026-05-17T13:06:02.521+00:00,forbidden-operations,193,deny-fc03-register-range,3,300,4,blocked,blocked,0.398,exception_code=1
-2026-05-17T13:06:02.522+00:00,forbidden-operations,194,deny-fc06-register,6,60,1,blocked,blocked,0.391,exception_code=1
-2026-05-17T13:06:02.522+00:00,forbidden-operations,195,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.414,exception_code=1
-2026-05-17T13:06:02.522+00:00,forbidden-operations,196,deny-invalid-quantity,3,0,0,blocked,blocked,0.181,connection_closed_safe_deny
-2026-05-17T13:06:02.523+00:00,forbidden-operations,197,deny-fc03-register-range,3,300,4,blocked,blocked,0.381,exception_code=1
-2026-05-17T13:06:02.523+00:00,forbidden-operations,198,deny-fc06-register,6,60,1,blocked,blocked,0.422,exception_code=1
-2026-05-17T13:06:02.524+00:00,forbidden-operations,199,deny-fc04-forbidden-fc,4,0,1,blocked,blocked,0.468,exception_code=1
-2026-05-17T13:06:02.524+00:00,forbidden-operations,200,deny-invalid-quantity,3,0,0,blocked,blocked,0.184,connection_closed_safe_deny
+2026-05-18T12:58:18.838+00:00,forbidden-operations,1,deny-fc03-register-range,3,300,4,blocked,error,0.436,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.839+00:00,forbidden-operations,2,deny-fc06-register,6,60,1,blocked,error,0.708,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.839+00:00,forbidden-operations,3,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.430,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.839+00:00,forbidden-operations,4,deny-invalid-quantity,3,0,0,blocked,error,0.314,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.840+00:00,forbidden-operations,5,deny-fc03-register-range,3,300,4,blocked,error,0.253,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.840+00:00,forbidden-operations,6,deny-fc06-register,6,60,1,blocked,error,0.241,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.840+00:00,forbidden-operations,7,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.228,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.840+00:00,forbidden-operations,8,deny-invalid-quantity,3,0,0,blocked,error,0.234,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.841+00:00,forbidden-operations,9,deny-fc03-register-range,3,300,4,blocked,error,0.230,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.841+00:00,forbidden-operations,10,deny-fc06-register,6,60,1,blocked,error,0.227,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.841+00:00,forbidden-operations,11,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.244,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.841+00:00,forbidden-operations,12,deny-invalid-quantity,3,0,0,blocked,error,0.213,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.842+00:00,forbidden-operations,13,deny-fc03-register-range,3,300,4,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.842+00:00,forbidden-operations,14,deny-fc06-register,6,60,1,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.842+00:00,forbidden-operations,15,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.842+00:00,forbidden-operations,16,deny-invalid-quantity,3,0,0,blocked,error,0.188,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.842+00:00,forbidden-operations,17,deny-fc03-register-range,3,300,4,blocked,error,0.189,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.843+00:00,forbidden-operations,18,deny-fc06-register,6,60,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.843+00:00,forbidden-operations,19,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.189,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.843+00:00,forbidden-operations,20,deny-invalid-quantity,3,0,0,blocked,error,0.183,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.843+00:00,forbidden-operations,21,deny-fc03-register-range,3,300,4,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.843+00:00,forbidden-operations,22,deny-fc06-register,6,60,1,blocked,error,0.183,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.843+00:00,forbidden-operations,23,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.181,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.844+00:00,forbidden-operations,24,deny-invalid-quantity,3,0,0,blocked,error,0.181,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.844+00:00,forbidden-operations,25,deny-fc03-register-range,3,300,4,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.844+00:00,forbidden-operations,26,deny-fc06-register,6,60,1,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.844+00:00,forbidden-operations,27,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.187,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.844+00:00,forbidden-operations,28,deny-invalid-quantity,3,0,0,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.845+00:00,forbidden-operations,29,deny-fc03-register-range,3,300,4,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.845+00:00,forbidden-operations,30,deny-fc06-register,6,60,1,blocked,error,0.207,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.845+00:00,forbidden-operations,31,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.239,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.845+00:00,forbidden-operations,32,deny-invalid-quantity,3,0,0,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.846+00:00,forbidden-operations,33,deny-fc03-register-range,3,300,4,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.846+00:00,forbidden-operations,34,deny-fc06-register,6,60,1,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.846+00:00,forbidden-operations,35,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.846+00:00,forbidden-operations,36,deny-invalid-quantity,3,0,0,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.846+00:00,forbidden-operations,37,deny-fc03-register-range,3,300,4,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.847+00:00,forbidden-operations,38,deny-fc06-register,6,60,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.847+00:00,forbidden-operations,39,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.847+00:00,forbidden-operations,40,deny-invalid-quantity,3,0,0,blocked,error,0.206,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.847+00:00,forbidden-operations,41,deny-fc03-register-range,3,300,4,blocked,error,0.215,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.847+00:00,forbidden-operations,42,deny-fc06-register,6,60,1,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.848+00:00,forbidden-operations,43,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.216,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.848+00:00,forbidden-operations,44,deny-invalid-quantity,3,0,0,blocked,error,0.225,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.848+00:00,forbidden-operations,45,deny-fc03-register-range,3,300,4,blocked,error,0.264,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.848+00:00,forbidden-operations,46,deny-fc06-register,6,60,1,blocked,error,0.255,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.849+00:00,forbidden-operations,47,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.421,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.849+00:00,forbidden-operations,48,deny-invalid-quantity,3,0,0,blocked,error,0.371,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.849+00:00,forbidden-operations,49,deny-fc03-register-range,3,300,4,blocked,error,0.320,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.850+00:00,forbidden-operations,50,deny-fc06-register,6,60,1,blocked,error,0.273,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.850+00:00,forbidden-operations,51,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.239,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.850+00:00,forbidden-operations,52,deny-invalid-quantity,3,0,0,blocked,error,0.224,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.851+00:00,forbidden-operations,53,deny-fc03-register-range,3,300,4,blocked,error,0.249,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.851+00:00,forbidden-operations,54,deny-fc06-register,6,60,1,blocked,error,0.618,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.852+00:00,forbidden-operations,55,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.378,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.852+00:00,forbidden-operations,56,deny-invalid-quantity,3,0,0,blocked,error,0.321,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.852+00:00,forbidden-operations,57,deny-fc03-register-range,3,300,4,blocked,error,0.270,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.852+00:00,forbidden-operations,58,deny-fc06-register,6,60,1,blocked,error,0.222,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.853+00:00,forbidden-operations,59,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.853+00:00,forbidden-operations,60,deny-invalid-quantity,3,0,0,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.853+00:00,forbidden-operations,61,deny-fc03-register-range,3,300,4,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.853+00:00,forbidden-operations,62,deny-fc06-register,6,60,1,blocked,error,0.188,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.853+00:00,forbidden-operations,63,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.184,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.854+00:00,forbidden-operations,64,deny-invalid-quantity,3,0,0,blocked,error,0.185,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.854+00:00,forbidden-operations,65,deny-fc03-register-range,3,300,4,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.854+00:00,forbidden-operations,66,deny-fc06-register,6,60,1,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.854+00:00,forbidden-operations,67,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.186,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.854+00:00,forbidden-operations,68,deny-invalid-quantity,3,0,0,blocked,error,0.188,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.855+00:00,forbidden-operations,69,deny-fc03-register-range,3,300,4,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.855+00:00,forbidden-operations,70,deny-fc06-register,6,60,1,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.855+00:00,forbidden-operations,71,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.855+00:00,forbidden-operations,72,deny-invalid-quantity,3,0,0,blocked,error,0.191,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.855+00:00,forbidden-operations,73,deny-fc03-register-range,3,300,4,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.856+00:00,forbidden-operations,74,deny-fc06-register,6,60,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.856+00:00,forbidden-operations,75,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.856+00:00,forbidden-operations,76,deny-invalid-quantity,3,0,0,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.856+00:00,forbidden-operations,77,deny-fc03-register-range,3,300,4,blocked,error,0.187,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.856+00:00,forbidden-operations,78,deny-fc06-register,6,60,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.857+00:00,forbidden-operations,79,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.857+00:00,forbidden-operations,80,deny-invalid-quantity,3,0,0,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.857+00:00,forbidden-operations,81,deny-fc03-register-range,3,300,4,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.857+00:00,forbidden-operations,82,deny-fc06-register,6,60,1,blocked,error,0.191,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.857+00:00,forbidden-operations,83,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.858+00:00,forbidden-operations,84,deny-invalid-quantity,3,0,0,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.858+00:00,forbidden-operations,85,deny-fc03-register-range,3,300,4,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.858+00:00,forbidden-operations,86,deny-fc06-register,6,60,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.858+00:00,forbidden-operations,87,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.858+00:00,forbidden-operations,88,deny-invalid-quantity,3,0,0,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.859+00:00,forbidden-operations,89,deny-fc03-register-range,3,300,4,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.859+00:00,forbidden-operations,90,deny-fc06-register,6,60,1,blocked,error,0.206,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.859+00:00,forbidden-operations,91,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.859+00:00,forbidden-operations,92,deny-invalid-quantity,3,0,0,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.859+00:00,forbidden-operations,93,deny-fc03-register-range,3,300,4,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.860+00:00,forbidden-operations,94,deny-fc06-register,6,60,1,blocked,error,0.205,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.860+00:00,forbidden-operations,95,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.211,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.860+00:00,forbidden-operations,96,deny-invalid-quantity,3,0,0,blocked,error,0.205,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.860+00:00,forbidden-operations,97,deny-fc03-register-range,3,300,4,blocked,error,0.213,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.860+00:00,forbidden-operations,98,deny-fc06-register,6,60,1,blocked,error,0.208,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.861+00:00,forbidden-operations,99,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.218,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.861+00:00,forbidden-operations,100,deny-invalid-quantity,3,0,0,blocked,error,0.408,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.861+00:00,forbidden-operations,101,deny-fc03-register-range,3,300,4,blocked,error,0.351,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.862+00:00,forbidden-operations,102,deny-fc06-register,6,60,1,blocked,error,0.325,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.862+00:00,forbidden-operations,103,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.284,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.862+00:00,forbidden-operations,104,deny-invalid-quantity,3,0,0,blocked,error,0.221,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.862+00:00,forbidden-operations,105,deny-fc03-register-range,3,300,4,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.863+00:00,forbidden-operations,106,deny-fc06-register,6,60,1,blocked,error,0.186,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.863+00:00,forbidden-operations,107,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.189,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.863+00:00,forbidden-operations,108,deny-invalid-quantity,3,0,0,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.863+00:00,forbidden-operations,109,deny-fc03-register-range,3,300,4,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.864+00:00,forbidden-operations,110,deny-fc06-register,6,60,1,blocked,error,0.188,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.864+00:00,forbidden-operations,111,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.864+00:00,forbidden-operations,112,deny-invalid-quantity,3,0,0,blocked,error,0.186,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.864+00:00,forbidden-operations,113,deny-fc03-register-range,3,300,4,blocked,error,0.190,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.864+00:00,forbidden-operations,114,deny-fc06-register,6,60,1,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.864+00:00,forbidden-operations,115,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.865+00:00,forbidden-operations,116,deny-invalid-quantity,3,0,0,blocked,error,0.190,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.865+00:00,forbidden-operations,117,deny-fc03-register-range,3,300,4,blocked,error,0.188,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.865+00:00,forbidden-operations,118,deny-fc06-register,6,60,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.865+00:00,forbidden-operations,119,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.205,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.865+00:00,forbidden-operations,120,deny-invalid-quantity,3,0,0,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.866+00:00,forbidden-operations,121,deny-fc03-register-range,3,300,4,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.866+00:00,forbidden-operations,122,deny-fc06-register,6,60,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.866+00:00,forbidden-operations,123,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.866+00:00,forbidden-operations,124,deny-invalid-quantity,3,0,0,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.866+00:00,forbidden-operations,125,deny-fc03-register-range,3,300,4,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.867+00:00,forbidden-operations,126,deny-fc06-register,6,60,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.867+00:00,forbidden-operations,127,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.190,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.867+00:00,forbidden-operations,128,deny-invalid-quantity,3,0,0,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.867+00:00,forbidden-operations,129,deny-fc03-register-range,3,300,4,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.867+00:00,forbidden-operations,130,deny-fc06-register,6,60,1,blocked,error,0.190,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.868+00:00,forbidden-operations,131,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.191,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.868+00:00,forbidden-operations,132,deny-invalid-quantity,3,0,0,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.868+00:00,forbidden-operations,133,deny-fc03-register-range,3,300,4,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.868+00:00,forbidden-operations,134,deny-fc06-register,6,60,1,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.868+00:00,forbidden-operations,135,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.191,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.869+00:00,forbidden-operations,136,deny-invalid-quantity,3,0,0,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.869+00:00,forbidden-operations,137,deny-fc03-register-range,3,300,4,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.869+00:00,forbidden-operations,138,deny-fc06-register,6,60,1,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.869+00:00,forbidden-operations,139,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.870+00:00,forbidden-operations,140,deny-invalid-quantity,3,0,0,blocked,error,0.214,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.870+00:00,forbidden-operations,141,deny-fc03-register-range,3,300,4,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.870+00:00,forbidden-operations,142,deny-fc06-register,6,60,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.870+00:00,forbidden-operations,143,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.870+00:00,forbidden-operations,144,deny-invalid-quantity,3,0,0,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.871+00:00,forbidden-operations,145,deny-fc03-register-range,3,300,4,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.871+00:00,forbidden-operations,146,deny-fc06-register,6,60,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.871+00:00,forbidden-operations,147,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.871+00:00,forbidden-operations,148,deny-invalid-quantity,3,0,0,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.871+00:00,forbidden-operations,149,deny-fc03-register-range,3,300,4,blocked,error,0.202,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.872+00:00,forbidden-operations,150,deny-fc06-register,6,60,1,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.872+00:00,forbidden-operations,151,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.872+00:00,forbidden-operations,152,deny-invalid-quantity,3,0,0,blocked,error,0.207,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.872+00:00,forbidden-operations,153,deny-fc03-register-range,3,300,4,blocked,error,0.205,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.872+00:00,forbidden-operations,154,deny-fc06-register,6,60,1,blocked,error,0.218,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.873+00:00,forbidden-operations,155,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.220,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.873+00:00,forbidden-operations,156,deny-invalid-quantity,3,0,0,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.873+00:00,forbidden-operations,157,deny-fc03-register-range,3,300,4,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.873+00:00,forbidden-operations,158,deny-fc06-register,6,60,1,blocked,error,0.215,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.873+00:00,forbidden-operations,159,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.209,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.874+00:00,forbidden-operations,160,deny-invalid-quantity,3,0,0,blocked,error,0.187,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.874+00:00,forbidden-operations,161,deny-fc03-register-range,3,300,4,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.874+00:00,forbidden-operations,162,deny-fc06-register,6,60,1,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.874+00:00,forbidden-operations,163,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.212,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.874+00:00,forbidden-operations,164,deny-invalid-quantity,3,0,0,blocked,error,0.191,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.875+00:00,forbidden-operations,165,deny-fc03-register-range,3,300,4,blocked,error,0.192,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.875+00:00,forbidden-operations,166,deny-fc06-register,6,60,1,blocked,error,0.199,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.875+00:00,forbidden-operations,167,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.201,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.875+00:00,forbidden-operations,168,deny-invalid-quantity,3,0,0,blocked,error,0.202,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.875+00:00,forbidden-operations,169,deny-fc03-register-range,3,300,4,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.876+00:00,forbidden-operations,170,deny-fc06-register,6,60,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.876+00:00,forbidden-operations,171,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.876+00:00,forbidden-operations,172,deny-invalid-quantity,3,0,0,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.876+00:00,forbidden-operations,173,deny-fc03-register-range,3,300,4,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.877+00:00,forbidden-operations,174,deny-fc06-register,6,60,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.877+00:00,forbidden-operations,175,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.190,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.877+00:00,forbidden-operations,176,deny-invalid-quantity,3,0,0,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.877+00:00,forbidden-operations,177,deny-fc03-register-range,3,300,4,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.877+00:00,forbidden-operations,178,deny-fc06-register,6,60,1,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.878+00:00,forbidden-operations,179,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.878+00:00,forbidden-operations,180,deny-invalid-quantity,3,0,0,blocked,error,0.196,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.878+00:00,forbidden-operations,181,deny-fc03-register-range,3,300,4,blocked,error,0.191,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.878+00:00,forbidden-operations,182,deny-fc06-register,6,60,1,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.878+00:00,forbidden-operations,183,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.879+00:00,forbidden-operations,184,deny-invalid-quantity,3,0,0,blocked,error,0.195,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.879+00:00,forbidden-operations,185,deny-fc03-register-range,3,300,4,blocked,error,0.191,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.879+00:00,forbidden-operations,186,deny-fc06-register,6,60,1,blocked,error,0.197,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.879+00:00,forbidden-operations,187,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.879+00:00,forbidden-operations,188,deny-invalid-quantity,3,0,0,blocked,error,0.204,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.880+00:00,forbidden-operations,189,deny-fc03-register-range,3,300,4,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.880+00:00,forbidden-operations,190,deny-fc06-register,6,60,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.880+00:00,forbidden-operations,191,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.880+00:00,forbidden-operations,192,deny-invalid-quantity,3,0,0,blocked,error,0.206,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.880+00:00,forbidden-operations,193,deny-fc03-register-range,3,300,4,blocked,error,0.203,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.881+00:00,forbidden-operations,194,deny-fc06-register,6,60,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.881+00:00,forbidden-operations,195,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.881+00:00,forbidden-operations,196,deny-invalid-quantity,3,0,0,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.881+00:00,forbidden-operations,197,deny-fc03-register-range,3,300,4,blocked,error,0.198,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.881+00:00,forbidden-operations,198,deny-fc06-register,6,60,1,blocked,error,0.200,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.882+00:00,forbidden-operations,199,deny-fc04-forbidden-fc,4,0,1,blocked,error,0.194,OSError:[Errno 49] Can't assign requested address
+2026-05-18T12:58:18.882+00:00,forbidden-operations,200,deny-invalid-quantity,3,0,0,blocked,error,0.193,OSError:[Errno 49] Can't assign requested address

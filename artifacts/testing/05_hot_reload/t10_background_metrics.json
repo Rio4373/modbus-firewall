@@ -1,0 +1,8 @@
+{
+  "scenario_runs": 200,
+  "ok": 600,
+  "exceptions": 0,
+  "errors": 0,
+  "total_requests": 600,
+  "connection_drops": 0
+}

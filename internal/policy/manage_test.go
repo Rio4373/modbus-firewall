@@ -72,12 +72,8 @@ rules: []
 		t.Fatalf("ожидали что active policy содержит allow-read, получили:\n%s", string(activeData))
 	}
 
-	candidateData, err := os.ReadFile(candidatePath)
-	if err != nil {
-		t.Fatalf("candidate policy должна оставаться доступной, ошибка: %v", err)
-	}
-	if !strings.Contains(string(candidateData), "allow-read") {
-		t.Fatalf("ожидали что candidate policy сохранена без изменений")
+	if _, err := os.Stat(candidatePath); !os.IsNotExist(err) {
+		t.Fatalf("candidate policy должна удаляться после approve, получили ошибку stat: %v", err)
 	}
 }
 

@@ -74,6 +74,44 @@ func TestMatcherRuleMatch(t *testing.T) {
 	}
 }
 
+func TestMatcherEvaluateDetailedReturnsMatchedRuleID(t *testing.T) {
+	t.Parallel()
+
+	matcher := mustNewMatcher(t, Policy{
+		Version:       1,
+		DefaultAction: DecisionDeny,
+		Rules: []Rule{
+			{
+				ID:             "allow-main",
+				Action:         DecisionAllow,
+				SourceIPs:      []string{"10.0.0.10"},
+				DestinationIPs: []string{"10.0.0.20"},
+				UnitIDs:        []uint8{1},
+				FunctionCodes:  []uint8{3},
+				AddressRanges:  []AddressRange{{Start: 0, End: 100}},
+			},
+		},
+	})
+
+	decision, ruleID, err := matcher.EvaluateDetailed(MatchRequest{
+		SourceIP:      "10.0.0.10",
+		DestinationIP: "10.0.0.20",
+		UnitID:        1,
+		FunctionCode:  3,
+		StartAddress:  10,
+		Quantity:      1,
+	})
+	if err != nil {
+		t.Fatalf("не ожидали ошибку EvaluateDetailed, получили: %v", err)
+	}
+	if decision != DecisionAllow {
+		t.Fatalf("ожидали allow, получили %q", decision)
+	}
+	if ruleID != "allow-main" {
+		t.Fatalf("ожидали matched rule id allow-main, получили %q", ruleID)
+	}
+}
+
 func TestMatcherMismatchSourceDestination(t *testing.T) {
 	t.Parallel()
 

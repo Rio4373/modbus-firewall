@@ -1,0 +1,2 @@
+tcpdump_path=/usr/sbin/tcpdump
+pcap_capture=possible_with_manual_interface_selection

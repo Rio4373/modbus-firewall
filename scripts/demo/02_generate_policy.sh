@@ -26,7 +26,7 @@ if [[ ! -s "${baseline_path}" ]]; then
   exit 1
 fi
 
-rule_count="$(grep -c '^[[:space:]]- id:' "${candidate_path}" || true)"
+rule_count="$(grep -E -c '^[[:space:]]+- id:' "${candidate_path}" || true)"
 printf "Сгенерировано правил: %s\n" "${rule_count}"
 
 if [[ "${rule_count}" -lt 1 ]]; then

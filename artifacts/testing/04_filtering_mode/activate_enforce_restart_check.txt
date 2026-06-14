@@ -1,0 +1,5 @@
+firewall_pid_at_start=81913
+firewall_pid_runtime=81913
+observe_to_enforce_hot_reload_detected=yes
+observe_to_enforce_restart_detected=no
+evidence_log=activate_enforce_firewall.log
